@@ -109,6 +109,53 @@
     updateCite();
   }
 
+  /* Citations — opening-hours grid: 30-min dropdowns, presets, Closed toggle */
+  var hoursGrid = document.getElementById("hoursGrid");
+  if (hoursGrid) {
+    var opts = ['<option value="">&mdash;</option>'];
+    for (var h = 0; h < 24; h++) {
+      for (var mn = 0; mn < 60; mn += 30) {
+        var hr = (h % 12) === 0 ? 12 : (h % 12);
+        opts.push("<option>" + hr + ":" + (mn === 0 ? "00" : "30") + " " + (h < 12 ? "AM" : "PM") + "</option>");
+      }
+    }
+    var openHTML = opts.join("");
+    var closeHTML = openHTML + "<option>11:59 PM</option>";
+    hoursGrid.querySelectorAll('select[name$="_open"]').forEach(function (s) { s.innerHTML = openHTML; });
+    hoursGrid.querySelectorAll('select[name$="_close"]').forEach(function (s) { s.innerHTML = closeHTML; });
+    var setDay = function (day, open, close, closed) {
+      var row = hoursGrid.querySelector('[data-day="' + day + '"]');
+      if (!row) return;
+      var o = row.querySelector('[name$="_open"]'), c = row.querySelector('[name$="_close"]'), cb = row.querySelector('[name$="_closed"]');
+      cb.checked = closed;
+      o.value = closed ? "" : (open || "");
+      c.value = closed ? "" : (close || "");
+      o.disabled = c.disabled = closed;
+      row.classList.toggle("is-closed", closed);
+    };
+    hoursGrid.querySelectorAll('[name$="_closed"]').forEach(function (cb) {
+      cb.addEventListener("change", function () {
+        var row = cb.closest(".hours-row");
+        var o = row.querySelector('[name$="_open"]'), c = row.querySelector('[name$="_close"]');
+        o.disabled = c.disabled = cb.checked;
+        if (cb.checked) { o.value = ""; c.value = ""; }
+        row.classList.toggle("is-closed", cb.checked);
+      });
+    });
+    var hdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    document.querySelectorAll("[data-hours-preset]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var pr = btn.getAttribute("data-hours-preset");
+        hdays.forEach(function (d) {
+          if (pr === "weekday") setDay(d, "8:00 AM", "5:00 PM", d === "saturday" || d === "sunday");
+          else if (pr === "247") setDay(d, "12:00 AM", "11:59 PM", false);
+          else setDay(d, "", "", false);
+        });
+      });
+    });
+    hdays.forEach(function (d) { setDay(d, "8:00 AM", "5:00 PM", d === "saturday" || d === "sunday"); });
+  }
+
   /* Get Started — preselect plan from ?plan= */
   var planParam = new URLSearchParams(location.search).get("plan");
   if (planParam) {
