@@ -4,6 +4,22 @@ team-photos/
 # Internal notes — keep local, don't publish
 BUILD-NOTES.md
 
+# Secrets & credentials — NEVER commit these
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+*credential*
+secrets.*
+
+# Dependencies / build output
+node_modules/
+dist/
+.cache/
+
 # OS junk
 .DS_Store
 Thumbs.db
