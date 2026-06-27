@@ -1,0 +1,10 @@
+# Source assets — not for the live site
+team-photos/
+
+# Internal notes — keep local, don't publish
+BUILD-NOTES.md
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

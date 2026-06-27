@@ -1,0 +1,19 @@
+# Enforce one canonical domain (www -> bare). Update if you use www as canonical.
+[[redirects]]
+  from = "https://www.talosoperations.com/*"
+  to = "https://talosoperations.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
