@@ -339,7 +339,10 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.1;letter-
 .tphoto .init{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:2.8rem;color:var(--accent);opacity:.5}
 .tinfo{padding:1.1rem 1.2rem 1.3rem}
 .tinfo b{display:block;font-family:var(--font-head);font-size:1.12rem;color:var(--text)}
-.tinfo span{font-size:.9rem;color:var(--text-dim)}
+.tinfo span{display:block;font-size:.9rem;color:var(--text-dim)}
+.tinfo a.tlink{display:inline-flex;align-items:center;gap:.35rem;margin-top:.55rem;font-size:.82rem;font-weight:600;color:var(--accent)}
+.tinfo a.tlink svg{width:15px;height:15px}
+.tinfo a.tlink:hover{text-decoration:underline}
 .ph-banner{font-size:.82rem;color:var(--accent);background:var(--accent-glow);border:1px dashed rgba(27,61,104,.35);border-radius:10px;padding:.55rem .9rem;display:inline-flex;gap:.5rem;margin-bottom:1.4rem}
 
 /* ---------- FAQ ---------- */
