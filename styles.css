@@ -464,3 +464,10 @@ address{font-style:normal}
 .legal-body li{margin-bottom:.45rem}
 .legal-body a{color:var(--accent);text-decoration:underline}
 .legal-body strong{color:var(--text)}
+
+
+/* ---------- Footer social icons ---------- */
+.footer .socials{display:flex;gap:.6rem;margin-top:.9rem}
+.footer .socials a{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid var(--border-strong);border-radius:50%;color:var(--text-dim);transition:background .15s,color .15s,border-color .15s}
+.footer .socials a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.footer .socials svg{width:17px;height:17px}
