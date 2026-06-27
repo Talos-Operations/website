@@ -3,6 +3,8 @@ team-photos/
 
 # Internal notes — keep local, don't publish
 BUILD-NOTES.md
+TODO.md
+*.docx
 
 # Secrets & credentials — NEVER commit these
 .env
