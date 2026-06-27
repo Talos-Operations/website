@@ -90,7 +90,9 @@
 
 <section class="section--tight">
   <div class="container" style="max-width:780px">
-    <form class="form" action="https://formspree.io/f/{{FORMSPREE_CITATIONS_ID}}" method="POST" data-demo>
+    <form class="form" name="citations" method="POST" action="/success.html" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="_gotcha">
+      <input type="hidden" name="form-name" value="citations">
+      <input type="hidden" name="subject" value="New citations order - talosoperations.com">
 
       <h3 class="form-section-title">1 &middot; Quantity</h3>
       <div class="field">
@@ -101,7 +103,7 @@
       </div>
       <div class="qty-box">
         <div class="qty-head"><span>Citations</span><span class="qty-max">200 max</span></div>
-        <input type="range" min="10" max="200" value="50" step="10" id="citeRange" aria-label="Number of citations">
+        <input type="range" min="10" max="200" value="50" step="10" id="citeRange" name="citation_quantity" aria-label="Number of citations">
         <div class="cite-out"><span id="citeCount">50</span> citations &middot; <b>$<span id="citeTotal">100</span></b> <span class="muted">&mdash; $2 per citation</span></div>
       </div>
 
@@ -171,9 +173,12 @@
           <span>Talos<small>Operations</small></span>
         </a>
         <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
-        <form class="news" data-demo>
-          <input type="email" placeholder="Your email" aria-label="Newsletter email" required>
+        <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="newsletter">
+          <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
+          <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
+          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       </form>
       </div>

@@ -74,7 +74,9 @@
     <span class="label label--soon reveal">Future Projects &middot; Coming soon</span>
     <h1 class="reveal">Deed Reader</h1>
     <p class="reveal" style="margin-inline:auto">Our first product, and the start of a lineup. We’re putting AI to work on tools beyond marketing — beginning with Deed Reader for law firms. Get early access below.</p>
-    <form class="waitlist reveal" id="waitlist" data-demo style="margin-inline:auto;justify-content:center">
+    <form class="waitlist reveal" id="waitlist" name="deed-reader-waitlist" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha" style="margin-inline:auto;justify-content:center">
+      <input type="hidden" name="form-name" value="deed-reader-waitlist">
+      <input type="hidden" name="subject" value="New Deed Reader waitlist signup">
       <input type="email" name="email" placeholder="you@lawfirm.com" required aria-label="Email for Deed Reader waitlist">
       <button type="submit" class="btn btn-accent">Join the waitlist</button>
       <div class="form-success">You're on the list — we'll reach out when early access opens.</div>
@@ -157,7 +159,9 @@
       <span class="label label--soon">Early access</span>
       <h2 style="margin-top:1rem">Get Deed Reader before everyone else</h2>
       <p>We're onboarding a small group of real-estate and title firms first. Join the waitlist and we'll reach out when your spot opens.</p>
-      <form class="waitlist" data-demo style="margin-inline:auto;justify-content:center">
+      <form class="waitlist" name="deed-reader-waitlist" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha" style="margin-inline:auto;justify-content:center">
+        <input type="hidden" name="form-name" value="deed-reader-waitlist">
+        <input type="hidden" name="subject" value="New Deed Reader waitlist signup">
         <input type="email" name="email" placeholder="you@lawfirm.com" required aria-label="Email for Deed Reader waitlist">
         <button type="submit" class="btn btn-accent">Join the waitlist</button>
         <div class="form-success">You're on the list — we'll be in touch soon.</div>
@@ -181,9 +185,12 @@
           <span>Talos<small>Operations</small></span>
         </a>
         <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
-        <form class="news" data-demo>
-          <input type="email" placeholder="Your email" aria-label="Newsletter email" required>
+        <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="newsletter">
+          <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
+          <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
+          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       </form>
       </div>

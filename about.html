@@ -186,9 +186,12 @@
           <span>Talos<small>Operations</small></span>
         </a>
         <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
-        <form class="news" data-demo>
-          <input type="email" placeholder="Your email" aria-label="Newsletter email" required>
+        <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="newsletter">
+          <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
+          <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
+          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       </form>
       </div>

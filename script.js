@@ -63,18 +63,35 @@
     });
   }
 
-  /* Fake form submit — replace with a real handler (Formspree, Framer Forms,
-     Netlify Forms, or your own endpoint) before launch. */
-  document.querySelectorAll("form[data-demo]").forEach(function (form) {
+  /* Real form submit -> Netlify Forms. AJAX for standard forms (inline
+     success, no page jump); file-upload forms submit natively. */
+  document.querySelectorAll("form[data-netlify]").forEach(function (form) {
+    if (form.enctype === "multipart/form-data") return; // files -> native submit
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var ok = form.querySelector(".form-success");
-      if (ok) {
-        ok.classList.add("show");
-      }
-      form.querySelectorAll("input,textarea").forEach(function (f) {
-        if (f.type !== "submit") f.value = "";
-      });
+      var hp = form.querySelector('[name="_gotcha"]');
+      if (hp && hp.value) return; // bot caught by honeypot
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
+      var body = new URLSearchParams(new FormData(form)).toString();
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("submit failed");
+          var ok = form.querySelector(".form-success");
+          if (ok) ok.classList.add("show");
+          form.querySelectorAll("input, textarea").forEach(function (f) {
+            if (f.type !== "submit" && f.type !== "hidden") f.value = "";
+          });
+          if (btn) btn.disabled = false;
+        })
+        .catch(function () {
+          if (btn) btn.disabled = false;
+          form.submit(); // fallback: native submit so the lead still lands
+        });
     });
   });
 

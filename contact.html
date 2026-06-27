@@ -99,7 +99,9 @@
         </div>
       </div>
 
-      <form class="form" action="https://formspree.io/f/{{FORMSPREE_ID}}" method="POST" data-demo>
+      <form class="form" name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="subject" value="New website inquiry (contact) - talosoperations.com">
         <div class="form-row">
           <div class="field"><label for="fn">First name</label><input id="fn" name="fn" type="text" autocomplete="given-name" placeholder="Jane" required></div>
           <div class="field"><label for="ln">Last name</label><input id="ln" name="ln" type="text" autocomplete="family-name" placeholder="Smith" required></div>
@@ -143,9 +145,12 @@
           <span>Talos<small>Operations</small></span>
         </a>
         <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
-        <form class="news" data-demo>
-          <input type="email" placeholder="Your email" aria-label="Newsletter email" required>
+        <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+          <input type="hidden" name="form-name" value="newsletter">
+          <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
+          <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
+          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
                 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       </form>
       </div>
