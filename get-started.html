@@ -68,15 +68,13 @@
   <div class="container">
     <span class="label reveal">Get started</span>
     <h1 class="reveal">Let&rsquo;s get you <span class="accent">growing</span></h1>
-    <p class="reveal">Pick your plan, share a few details, and choose a time for your kickoff call. We&rsquo;ll confirm and get to work &mdash; no payment now.</p>
+    <p class="reveal">Pick your plan, then grab a free consultation in a couple of clicks. We&rsquo;ll map out exactly how to get you found and booked &mdash; no payment now.</p>
   </div>
 </section>
 
 <section class="section--tight">
   <div class="container" style="max-width:780px">
-    <form class="form" name="get-started" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
-      <input type="hidden" name="form-name" value="get-started">
-      <input type="hidden" name="subject" value="New Get Started request - talosoperations.com">
+    <div class="form">
 
       <h3 class="form-section-title">1 &middot; Choose your plan</h3>
       <div class="plan-picker">
@@ -88,33 +86,12 @@
           <span class="po-card"><span class="po-name">Complete</span><span class="po-price">$699<small>/mo</small></span><span class="po-desc">The full growth engine</span></span></label>
       </div>
 
-      <h3 class="form-section-title">2 &middot; Your details</h3>
-      <div class="form-row">
-        <div class="field"><label for="fn">First name *</label><input id="fn" name="fn" type="text" autocomplete="given-name" required></div>
-        <div class="field"><label for="ln">Last name *</label><input id="ln" name="ln" type="text" autocomplete="family-name" required></div>
+      <h3 class="form-section-title">2 &middot; Book your free consultation</h3>
+      <p class="form-note" style="margin:-.2rem 0 1.2rem">Pick a time that works and we&rsquo;ll map out exactly how to get you found, booked, and growing &mdash; no payment, no pressure. Not sure which plan fits? We&rsquo;ll help you choose on the call.</p>
+      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm)">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/tNdXR6yPU9rg7Y04taU3" style="width:100%;border:none;overflow:hidden;min-height:720px;display:block" scrolling="no" id="tNdXR6yPU9rg7Y04taU3_1782611504503" title="Book a free consultation with Talos Operations"></iframe>
       </div>
-      <div class="form-row">
-        <div class="field"><label for="em">Email *</label><input id="em" name="em" type="email" autocomplete="email" required></div>
-        <div class="field"><label for="phone">Phone *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
-      </div>
-      <div class="form-row">
-        <div class="field"><label for="biz">Business name *</label><input id="biz" name="biz" type="text" required></div>
-        <div class="field"><label for="site">Website</label><input id="site" name="site" type="text" inputmode="url" placeholder="www.yourbusiness.com"></div>
-      </div>
-      <div class="field"><label for="area">Service area / town(s)</label><input id="area" name="area" type="text" placeholder="The towns you serve"></div>
-
-      <h3 class="form-section-title">3 &middot; Book your kickoff call</h3>
-      <div class="form-row">
-        <div class="field"><label for="caldate">Preferred date</label><input id="caldate" name="caldate" type="date"></div>
-        <div class="field"><label for="caltime">Preferred time</label><select id="caltime" name="caltime"><option>Morning (8am&ndash;12pm)</option><option>Afternoon (12&ndash;5pm)</option><option>Evening (5&ndash;8pm)</option></select></div>
-      </div>
-      <div class="field"><label for="msg">Anything we should know? <span class="optional">(optional)</span></label><textarea id="msg" name="msg" placeholder="A bit about your business and what you want to achieve."></textarea></div>
-      <p class="form-note">We&rsquo;ll confirm your kickoff call by email or text. No payment is taken now.</p>
-
-      <button type="submit" class="btn btn-accent btn-lg" style="width:100%;margin-top:.4rem">Get started</button>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      <div class="form-success">You&rsquo;re in! We&rsquo;ve got your details and preferred time &mdash; we&rsquo;ll confirm your kickoff call shortly.</div>
-    </form>
+    </div>
   </div>
 </section>
 
@@ -175,5 +152,6 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Get Started","item":"https://talosoperations.com/get-started.html"}]}
 </script>
 <script src="script.js" defer></script>
+<script src="https://api.leadconnectorhq.com/js/form_embed.js"></script>
 </body>
 </html>
