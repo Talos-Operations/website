@@ -21,3 +21,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://talosoperations.com/sitemap.xml
+Disallow: /deed-reader-access

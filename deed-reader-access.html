@@ -4,22 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
-<title>Deed Reader — AI Deed Intake for Law Firms | Talos Operations</title>
-<meta name="description" content="Deed Reader uses AI to read property deeds and title documents and turn them into clean, structured intake in seconds. Join the early-access waitlist.">
-<link rel="canonical" href="https://talosoperations.com/deed-reader.html">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Deed Reader — AI Deed Intake for Law Firms | Talos Operations">
-<meta property="og:description" content="Deed Reader uses AI to read property deeds and title documents and turn them into clean, structured intake in seconds. Join the early-access waitlist.">
-<meta property="og:url" content="https://talosoperations.com/deed-reader.html">
-<meta property="og:image" content="https://talosoperations.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Talos Operations">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Deed Reader — AI Deed Intake for Law Firms | Talos Operations">
-<meta name="twitter:description" content="Deed Reader uses AI to read property deeds and title documents and turn them into clean, structured intake in seconds. Join the early-access waitlist.">
-<meta name="twitter:image" content="https://talosoperations.com/og-image.jpg">
+<title>Deed Reader &mdash; Early Access | Talos Operations</title>
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#14233f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
@@ -29,7 +15,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=8">
-<style>.waitlist{display:flex;gap:.6rem;flex-wrap:wrap;max-width:480px;margin:1.6rem 0 .5rem}.waitlist input{flex:1;min-width:200px;padding:.85rem 1.1rem;border:1px solid var(--border-2);border-radius:var(--r-pill);background:var(--card);font-size:.95rem}.waitlist input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}.form-note{font-size:.85rem;color:var(--ink-dim)}.drmock{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}.drmock .h{background:linear-gradient(160deg,var(--navy),var(--navy-deep));color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.04em;padding:14px 18px}.drmock .r{display:flex;align-items:center;gap:.6rem;padding:12px 18px;border-bottom:1px solid var(--border);font-size:.92rem}.drmock .r:last-child{border-bottom:none}.drmock .r .d{width:18px;height:18px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;flex:none}.drmock .r b{margin-left:auto;color:var(--navy-deep);font-family:var(--fd)}</style>
+<style>
+#gate .gate{max-width:440px;margin:0 auto}
+.gate-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:2.6rem 2.2rem;text-align:center}
+.gate-lock{width:58px;height:58px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin:0 auto 1.3rem}
+.gate-lock svg{width:26px;height:26px}
+.gate-card h1{font-size:1.55rem;margin-bottom:.6rem}
+.gate-card>p{font-size:.96rem;color:var(--ink-soft);margin-bottom:1.5rem}
+.gate-form{display:flex;flex-direction:column;gap:.8rem}
+.gate-form input{padding:.95rem 1.1rem;border:1px solid var(--border-2);border-radius:var(--r);background:var(--bg);font-family:var(--fb);font-size:1rem;text-align:center}
+.gate-form input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.gate-err{color:#c0392b;font-size:.88rem;min-height:1.1em;margin-top:.7rem;font-weight:500}
+.gate-note{font-size:.83rem;color:var(--ink-dim);margin-top:1.4rem}
+.gate-note a{font-weight:600}
+.dr-ready{max-width:720px;margin:0 auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:2.8rem 2.2rem}
+.dr-ready .ok{width:58px;height:58px;border-radius:50%;background:var(--ok);color:#fff;display:grid;place-items:center;margin:0 auto 1.3rem}
+.dr-ready .ok svg{width:28px;height:28px}
+.dr-ready h2{margin-bottom:.7rem}
+.dr-ready>p{color:var(--ink-soft);max-width:520px;margin:0 auto}
+.dr-slot{margin-top:1.8rem;border:2px dashed var(--border-2);border-radius:var(--r);padding:2.4rem;color:var(--ink-dim);font-size:.92rem;background:var(--bg-alt)}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -85,73 +90,35 @@
 </header>
 
 <main id="main">
-<section class="section">
-  <div class="wrap hero-grid" style="align-items:center">
-    <div class="reveal">
-      <span class="label">Software &middot; Coming soon</span>
-      <h1 style="margin:1rem 0 1rem">Deed Reader</h1>
-      <p class="sub" style="font-size:1.12rem;color:var(--ink-soft);margin-bottom:.4rem">Our first product, and the start of a lineup. We&rsquo;re putting AI to work on tools beyond marketing &mdash; beginning with Deed Reader for law firms. Get early access below.</p>
-      <form class="waitlist reveal" id="waitlist" name="deed-reader-waitlist" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
-      <input type="hidden" name="form-name" value="deed-reader-waitlist">
-      <input type="hidden" name="subject" value="New Deed Reader waitlist signup">
-      <input type="email" name="email" placeholder="you@lawfirm.com" required aria-label="Email for Deed Reader waitlist">
-      <button type="submit" class="btn btn-accent">Join the waitlist</button>
-      <div class="form-success">You&rsquo;re on the list &mdash; we&rsquo;ll reach out when early access opens.</div>
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-    </form>
-      <p class="form-note reveal">Be first in line for early access. No spam, ever.</p>
-      <p class="reveal" style="margin-top:1.2rem"><a href="deed-reader-access.html" class="btn btn-ghost">Already invited? Enter early access <span class="arr">&rarr;</span></a></p>
-    </div>
-    <div class="reveal">
-      <div class="drmock">
-        <div class="h">Deed Reader &middot; extracted</div>
-        <div class="r"><span class="d">✓</span>Parcel ID <b>07-114-329</b></div><div class="r"><span class="d">✓</span>Grantor <b>J. &amp; M. Carter</b></div><div class="r"><span class="d">✓</span>Grantee <b>Oakline Holdings LLC</b></div><div class="r"><span class="d">✓</span>Legal description <b>parsed</b></div><div class="r"><span class="d">✓</span>Recording date <b>04 / 18 / 2025</b></div>
+  <section class="section" id="gate">
+    <div class="wrap">
+      <div class="gate">
+        <div class="gate-card">
+          <div class="gate-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <h1>Deed Reader &mdash; Early Access</h1>
+          <p>Enter the access password your Talos contact gave you to open the preview.</p>
+          <form class="gate-form" id="gateForm">
+            <input type="password" id="gatePass" placeholder="Access password" autocomplete="off" aria-label="Access password">
+            <button type="submit" class="btn btn-accent btn-lg" style="width:100%">Unlock <span class="arr">&rarr;</span></button>
+          </form>
+          <div class="gate-err" id="gateErr" role="alert"></div>
+          <p class="gate-note">Invited firms only. Need access? <a href="mailto:hello@talosoperations.com" class="accent-t">Email us</a> or <a href="deed-reader.html" class="accent-t">join the waitlist</a>.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="label" style="justify-content:center">What it does</span>
-      <h2>Built for the way firms actually work</h2>
+  </section>
+  <section class="section" id="drApp" hidden>
+    <div class="wrap">
+      <div class="dr-ready">
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h2>You&rsquo;re in &mdash; welcome to Deed Reader early access</h2>
+        <p>Thanks for helping us test. The live Deed Reader preview will run right here. We&rsquo;ll email your firm the moment it&rsquo;s ready for real deeds.</p>
+        <!-- ===== DROP THE DEED READER TOOL HERE: replace this slot with an <iframe src="..."> or the app embed ===== -->
+        <div class="dr-slot">Deed Reader preview loads here.</div>
+        <p style="margin-top:1.6rem"><a href="mailto:hello@talosoperations.com" class="btn btn-accent">Questions? Email us <span class="arr">&rarr;</span></a></p>
+      </div>
     </div>
-    <div class="grid3">
-      <article class="card reveal" style="--i:0"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Reads any deed</h3><p>Warranty deeds, quitclaims, title docs &mdash; upload a PDF or scan and Deed Reader pulls the key fields in seconds.</p></article>
-      <article class="card reveal" style="--i:1"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg></div><h3>Structured intake</h3><p>Output lands in clean, consistent fields your team and case-management system can rely on &mdash; no rekeying.</p></article>
-      <article class="card reveal" style="--i:2"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Fewer errors</h3><p>Every extraction is flagged for quick human review, so you catch the rare edge case before it reaches a closing.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="label">How it works</span><h2>Three steps, seconds each</h2></div>
-    <div class="steps-grid">
-      <div class="step reveal" style="--i:0"><div class="n">01</div><h3>Upload</h3><p>Drop in a deed or title document &mdash; PDF, scan, or photo.</p></div>
-      <div class="step reveal" style="--i:1"><div class="n">02</div><h3>Extract</h3><p>Deed Reader parses the parties, parcel, legal description, and dates automatically.</p></div>
-      <div class="step reveal" style="--i:2"><div class="n">03</div><h3>Review &amp; export</h3><p>Confirm the flagged fields and push structured intake straight into your workflow.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section--tight">
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <h2>Get Deed Reader before everyone else</h2>
-      <p>We&rsquo;re onboarding a small group of real-estate and title firms first. Join the waitlist and we&rsquo;ll reach out when your spot opens.</p>
-      <form class="waitlist" name="deed-reader-waitlist" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha" style="margin-inline:auto;justify-content:center">
-        <input type="hidden" name="form-name" value="deed-reader-waitlist">
-        <input type="hidden" name="subject" value="New Deed Reader waitlist signup">
-        <input type="email" name="email" placeholder="you@lawfirm.com" required aria-label="Email for Deed Reader waitlist" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff">
-        <button type="submit" class="btn btn-white">Join the waitlist</button>
-        <div class="form-success">You&rsquo;re on the list &mdash; we&rsquo;ll be in touch soon.</div>
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 </main>
 
 <footer class="footer">
@@ -206,9 +173,23 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://talosoperations.com/#website","url":"https://talosoperations.com/","name":"Talos Operations","publisher":{"@id":"https://talosoperations.com/#business"}}
 </script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Software","item":"https://talosoperations.com/future-projects.html"},{"@type":"ListItem","position":3,"name":"Deed Reader","item":"https://talosoperations.com/deed-reader.html"}]}
-</script>
 <script src="script.js" defer></script>
+<script>
+(function(){
+  var H="f8ad01dc3d3749a7e66eb7ec24decd2b28aeea1082ed31765c9e88c5b91a1453"; /* SHA-256 of the access password. To change the password, swap this hash (just ask and it's a 30-second update). */
+  var gate=document.getElementById("gate"), app=document.getElementById("drApp");
+  var form=document.getElementById("gateForm"), inp=document.getElementById("gatePass"), err=document.getElementById("gateErr");
+  function unlock(){ gate.hidden=true; app.hidden=false; }
+  try{ if(sessionStorage.getItem("dr_access")==="1") unlock(); }catch(e){}
+  function sha(s){ return crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)).then(function(b){ return Array.prototype.map.call(new Uint8Array(b), function(x){ return ("0"+x.toString(16)).slice(-2); }).join(""); }); }
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); err.textContent="";
+    sha((inp.value||"").trim()).then(function(h){
+      if(h===H){ try{ sessionStorage.setItem("dr_access","1"); }catch(e){} unlock(); }
+      else { err.textContent="Incorrect password. Check with your Talos contact and try again."; inp.select(); }
+    });
+  });
+})();
+</script>
 </body>
 </html>
