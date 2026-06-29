@@ -140,7 +140,7 @@ p{color:var(--ink-soft)}
 .hero .trust{display:flex;flex-wrap:wrap;gap:.7rem 1.6rem}
 .hero .trust span{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--ink-soft)}
 .tick{width:20px;height:20px;flex:none;display:grid;place-items:center;border-radius:50%;background:var(--accent-soft);color:var(--accent)}
-.tick svg{width:11px;height:11px;display:block}
+.tick svg{width:13px;height:13px;display:block}
 
 .mock{position:relative}
 .browser{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
