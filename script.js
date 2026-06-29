@@ -114,6 +114,8 @@
       citeCount.textContent = n;
       citeTotal.textContent = (n * 2).toLocaleString();
     };
+    var qp = new URLSearchParams(location.search).get("qty");
+    if (qp) { var qn = Math.min(200, Math.max(10, Math.round(parseInt(qp, 10) / 5) * 5)); if (!isNaN(qn)) citeRange.value = qn; }
     citeRange.addEventListener("input", updateCite);
     updateCite();
   }
@@ -175,5 +177,42 @@
       btn.textContent = open ? "Close" : "+ More";
     });
   });
+
+  /* Citations add-on slider (services card) */
+  var citeCard = document.getElementById("citeRangeCard");
+  if (citeCard) {
+    var ccCount = document.getElementById("citeCountCard");
+    var ccTotal = document.getElementById("citeTotalCard");
+    var ccLink = document.getElementById("citeOrderLink");
+    var updateCard = function () {
+      var n = parseInt(citeCard.value, 10);
+      ccCount.textContent = n;
+      ccTotal.textContent = (n * 2).toLocaleString();
+      if (ccLink) ccLink.href = "citations.html?qty=" + n;
+    };
+    citeCard.addEventListener("input", updateCard);
+    updateCard();
+  }
+  /* A la carte "See details" toggles */
+  document.querySelectorAll(".detail-toggle").forEach(function (btn) {
+    var list = btn.nextElementSibling;
+    if (!list || !list.classList.contains("detail-list")) return;
+    btn.addEventListener("click", function () {
+      var open = list.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      list.style.maxHeight = open ? list.scrollHeight + "px" : null;
+      btn.textContent = open ? (btn.getAttribute("data-close") || "Hide details") : (btn.getAttribute("data-open") || "See details");
+    });
+  });
+  /* Citations "Learn more" modal */
+  var citeModal = document.getElementById("citeModal");
+  var citeOpenBtn = document.getElementById("citeLearnMore");
+  if (citeModal && citeOpenBtn) {
+    var openModal = function () { citeModal.hidden = false; document.body.style.overflow = "hidden"; };
+    var closeModal = function () { citeModal.hidden = true; document.body.style.overflow = ""; };
+    citeOpenBtn.addEventListener("click", openModal);
+    citeModal.querySelectorAll("[data-close-modal]").forEach(function (el) { el.addEventListener("click", closeModal); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !citeModal.hidden) closeModal(); });
+  }
 
 })();

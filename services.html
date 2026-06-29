@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 <style>.pcard .pmore{display:block;text-align:center;font-size:.85rem;font-weight:600;color:var(--accent);margin:-.5rem 0 1rem}.pcard .pmore:hover{text-decoration:underline}.addon{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem}.addon .ap{font-family:var(--fd);font-weight:800;font-size:1.5rem;color:var(--navy);margin:.2rem 0 .5rem}.addon .ap small{font-size:.8rem;color:var(--ink-dim);font-weight:500}.addon p{font-size:.92rem;margin-bottom:.9rem}.addon .more{font-weight:600;font-size:.88rem;color:var(--accent)}</style>
 </head>
 <body>
@@ -129,19 +129,72 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="label">One-time add-ons</span>
-      <h2>À la carte extras</h2>
+      <h2>&Agrave; la carte extras</h2>
       <p>Add any of these once &mdash; no subscription. Mix and match with any plan.</p>
     </div>
-    <div class="grid3">
-      <div class="addon reveal" style="--i:0"><h3>Website build</h3><div class="ap">$1,500</div><p>A clean, fast, mobile-friendly site built to turn visitors into calls. Includes free professional email + Google tracking setup.</p><a href="contact.html" class="more">Add this &rarr;</a></div>
-      <div class="addon reveal" style="--i:1"><h3>Website redesign</h3><div class="ap">$750<small>+</small></div><p>A modern rebuild of your existing site &mdash; faster, and built to rank and convert.</p><a href="contact.html" class="more">Add this &rarr;</a></div>
-      <div class="addon reveal" style="--i:2"><h3>Bulk citations</h3><div class="ap">$2 <small>each</small></div><p>Get listed across up to 200 directories to boost trust and visibility &mdash; pick how many you need.</p><a href="citations.html" class="more">Order citations &rarr;</a></div>
-      <div class="addon reveal" style="--i:0"><h3>Basic branding</h3><div class="ap">$250</div><p>A clean logo and color set so your business looks professional everywhere.</p><a href="contact.html" class="more">Add this &rarr;</a></div>
-      <div class="addon reveal" style="--i:1"><h3>Facebook &amp; Instagram setup</h3><div class="ap">$150</div><p>Your social pages set up, branded, and linked to your site and profile.</p><a href="contact.html" class="more">Add this &rarr;</a></div>
-      <div class="addon reveal" style="--i:2"><h3>Paid Ads + Landing Page</h3><div class="ap">Custom</div><p>High-intent leads on demand &mdash; a high-converting landing page paired with managed Google &amp; Facebook ads. Priced separately.</p><a href="contact.html" class="more">Ask about paid ads &rarr;</a></div>
+    <div class="addon-grid">
+      <div class="acard reveal" style="--i:0">
+        <h3>Website build / redesign</h3>
+        <div class="ap">$500&ndash;$2,500</div>
+        <span class="ap-note">priced by size</span>
+        <p>A clean, fast site &mdash; new or rebuilt &mdash; made to turn visitors into calls.</p>
+        <a href="contact.html" class="more">Add this &rarr;</a>
+        <button type="button" class="detail-toggle" aria-expanded="false" data-open="See details &darr;" data-close="Hide details">See details &darr;</button>
+        <ul class="detail-list">
+          <li><b>Built to convert</b> &mdash; clear calls-to-action and one-tap click-to-call throughout.</li>
+          <li><b>Fast + mobile-friendly</b> &mdash; loads quick and looks right on every device.</li>
+          <li><b>Core pages</b> &mdash; home, services, about, contact (more pages scale the price).</li>
+          <li><b>SEO-ready structure</b> &mdash; built so Google can find and rank it.</li>
+          <li><b>Free professional email + Google tracking setup</b> &mdash; included with every build.</li>
+          <li><b>New build or full rebuild</b> &mdash; of your existing site.</li>
+          <li><b>You own it</b> &mdash; the site and domain transfer to you once paid in full.</li>
+          <li><b>Simple terms</b> &mdash; 50% deposit to start, 50% on delivery. Optional hosting + maintenance afterward.</li>
+        </ul>
+      </div>
+      <div class="acard reveal" style="--i:1">
+        <h3>Bulk citations</h3>
+        <div class="ap">$2 <small>each</small></div>
+        <p>Directory listings that build long-term trust and visibility &mdash; pick how many you need.</p>
+        <div class="qty-box">
+          <div class="qty-head"><span>Citations</span><span class="qty-max">200 max</span></div>
+          <input type="range" min="10" max="200" value="10" step="5" id="citeRangeCard" aria-label="Number of citations">
+          <div class="cite-out"><span id="citeCountCard">10</span> citations &middot; <b>$<span id="citeTotalCard">20</span></b> <span class="muted">&mdash; $2 each</span></div>
+        </div>
+        <div class="acard-actions">
+          <a href="citations.html?qty=10" class="more" id="citeOrderLink">Order citations &rarr;</a>
+          <button type="button" class="link-more" id="citeLearnMore" aria-haspopup="dialog">Learn more</button>
+        </div>
+        <button type="button" class="detail-toggle" aria-expanded="false" data-open="See details &darr;" data-close="Hide details">See details &darr;</button>
+        <ul class="detail-list">
+          <li><b>Listed where it matters</b> &mdash; Yelp, Apple Maps, Bing, BBB, and the directories Google checks.</li>
+          <li><b>Consistent everywhere</b> &mdash; identical name, address, and phone across every listing.</li>
+          <li><b>Pick your volume</b> &mdash; use the slider; priced at $2 per citation.</li>
+          <li><b>Yours to keep</b> &mdash; every citation stays with you permanently.</li>
+          <li><b>One-time, done for you</b> &mdash; we build them all out; nothing for you to manage.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
+
+<div class="modal" id="citeModal" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="citeModalTitle">
+    <button type="button" class="modal-x" data-close-modal aria-label="Close">&times;</button>
+    <h3 id="citeModalTitle">What are citations?</h3>
+    <p>A citation is any place online that lists your business&rsquo;s name, address, and phone number &mdash; directories like Yelp, Apple Maps, Bing, BBB, Facebook, and dozens of local and industry sites.</p>
+    <h4>Why they matter</h4>
+    <p>Google decides who to trust partly by how consistently your business shows up across the web. The more accurate, matching listings it finds, the more established and legitimate you look &mdash; which lifts you in local search and the map pack.</p>
+    <h4>Why they&rsquo;re worth paying for</h4>
+    <ul>
+      <li><b>They stay with you forever.</b> Once a citation is built, it&rsquo;s yours &mdash; it keeps working even if you stop every other service.</li>
+      <li><b>One-time cost, long-term payoff.</b> You pay once; the listing keeps feeding your rankings for years.</li>
+      <li><b>They compound.</b> Every consistent listing is another vote of trust &mdash; the more you have, the stronger your local presence.</li>
+      <li><b>They&rsquo;re foundational.</b> Ads bring you leads today; citations quietly strengthen your visibility for the long haul.</li>
+    </ul>
+    <p class="modal-bottom"><b>Bottom line:</b> citations are one of the best long-term investments in your local presence &mdash; cheap, permanent, and always working in the background.</p>
+  </div>
+</div>
 <section class="section--tight">
   <div class="wrap">
     <div class="cta-band reveal">
