@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
-<title>Local Citations Service — Order Form | Talos Operations</title>
-<meta name="description" content="Order high-quality local and national business citations to boost your local SEO. Choose your quantity, share your business details, and we build your listings.">
-<link rel="canonical" href="https://talosoperations.com/citations.html">
+<title>Website Build / Redesign &mdash; Order Form | Talos Operations</title>
+<meta name="description" content="Order a new website or a redesign built to turn visitors into calls. Pick your build, get a live estimate, and we&rsquo;ll handle the rest. You own the site and domain.">
+<link rel="canonical" href="https://talosoperations.com/website-order.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Local Citations Service — Order Form | Talos Operations">
-<meta property="og:description" content="Order high-quality local and national business citations to boost your local SEO. Choose your quantity, share your business details, and we build your listings.">
-<meta property="og:url" content="https://talosoperations.com/citations.html">
+<meta property="og:title" content="Website Build / Redesign &mdash; Order Form | Talos Operations">
+<meta property="og:description" content="Order a new website or a redesign built to turn visitors into calls. Pick your build, get a live estimate, and we&rsquo;ll handle the rest. You own the site and domain.">
+<meta property="og:url" content="https://talosoperations.com/website-order.html">
 <meta property="og:image" content="https://talosoperations.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Talos Operations">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Local Citations Service — Order Form | Talos Operations">
-<meta name="twitter:description" content="Order high-quality local and national business citations to boost your local SEO. Choose your quantity, share your business details, and we build your listings.">
+<meta name="twitter:title" content="Website Build / Redesign &mdash; Order Form | Talos Operations">
+<meta name="twitter:description" content="Order a new website or a redesign built to turn visitors into calls. Pick your build, get a live estimate, and we&rsquo;ll handle the rest. You own the site and domain.">
 <meta name="twitter:image" content="https://talosoperations.com/og-image.jpg">
 <meta name="theme-color" content="#14233f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -39,25 +39,31 @@
 .form-section-title{font-family:var(--fd);font-size:1.06rem;color:var(--navy-deep);margin:1.8rem 0 .8rem;padding-top:1.4rem;border-top:1px solid var(--border)}
 .form-section-title:first-of-type{border-top:none;padding-top:0;margin-top:.4rem}
 .optional{font-weight:400;color:var(--ink-dim);font-size:.85rem}
-.qty-box{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.3rem}
-.qty-head{display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);margin-bottom:.7rem}
-.qty-max{color:var(--ink-dim)}
-.qty-box input[type=range]{width:100%;accent-color:var(--accent)}
-.cite-out{margin-top:.7rem;font-size:1rem;color:var(--ink)}
-.cite-out b{font-family:var(--fd);color:var(--navy-deep)}
-.hours-presets{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem}
-.hours-presets-label{font-size:.85rem;color:var(--ink-soft)}
-.btn-mini{font-size:.82rem;font-weight:600;padding:.4rem .8rem;border-radius:var(--r-pill);border:1px solid var(--border-2);background:var(--card);color:var(--navy);cursor:pointer}
-.btn-mini:hover{border-color:var(--accent);color:var(--accent)}
-.hours{display:grid;gap:.5rem;margin-top:.4rem}
-.hours-row{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
-.hours-row .day{width:96px;font-size:.9rem;font-weight:600;color:var(--ink)}
-.hsel{padding:.45rem .6rem;border:1px solid var(--border-2);border-radius:var(--r-sm);background:var(--bg);font-size:.86rem;font-family:var(--fb)}
-.hours-row .to{color:var(--ink-dim)}
-.hours-row .closed{display:inline-flex;align-items:center;gap:.35rem;font-size:.85rem;color:var(--ink-soft);margin-left:auto}
-.hours-row.is-closed .hsel{opacity:.4}
-.delivery-note{background:var(--accent-soft);color:var(--navy-deep);border-radius:var(--r-sm);padding:.8rem 1.1rem;font-weight:600;font-size:.92rem}
 .form-note{font-size:.85rem;color:var(--ink-soft);margin-top:.5rem}
+.radio-row{display:flex;gap:.7rem;flex-wrap:wrap}
+.radio-card{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.1rem;border:1px solid var(--border-2);border-radius:var(--r);background:var(--card);cursor:pointer;font-size:.92rem;font-weight:500;color:var(--ink)}
+.radio-card input{accent-color:var(--accent)}
+.radio-card:has(input:checked){border-color:var(--accent);background:var(--accent-soft);color:var(--navy-deep)}
+.size-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem}
+@media(max-width:680px){.size-cards{grid-template-columns:1fr}}
+.size-card{position:relative;display:block;padding:1.1rem 1.2rem 1.2rem;border:1px solid var(--border-2);border-radius:var(--r);background:var(--card);cursor:pointer;transition:border-color .2s,box-shadow .2s}
+.size-card:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.size-card input{position:absolute;top:1rem;right:1rem;accent-color:var(--accent)}
+.size-card .sc-name{display:block;font-family:var(--fd);font-weight:700;color:var(--navy-deep);font-size:1.02rem}
+.size-card .sc-desc{display:block;font-size:.83rem;color:var(--ink-soft);margin:.3rem 0 .7rem;min-height:2.4em}
+.size-card .sc-price{font-family:var(--fd);font-weight:700;color:var(--accent);font-size:1.3rem}
+.addon-list{display:grid;gap:.5rem}
+.addon-opt{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;border:1px solid var(--border);border-radius:var(--r-sm);background:var(--bg-alt)}
+.addon-opt>span:first-child{display:inline-flex;align-items:center;gap:.5rem;font-size:.92rem;color:var(--ink)}
+.addon-opt input[type=checkbox]{accent-color:var(--accent);width:17px;height:17px}
+.addon-opt input[type=number]{width:64px;padding:.35rem .5rem;border:1px solid var(--border-2);border-radius:var(--r-sm);background:var(--bg);font-family:var(--fb);font-size:.9rem}
+.ac-price{font-size:.85rem;font-weight:600;color:var(--ink-soft);white-space:nowrap}
+.included-note{font-size:.86rem;color:var(--ink-soft);margin-top:.7rem;display:flex;align-items:flex-start;gap:.45rem}
+.included-note svg{width:16px;height:16px;color:var(--ok);flex:none;margin-top:2px}
+.est-box{background:var(--accent-soft);border:1px solid rgba(47,111,224,.28);border-radius:var(--r);padding:1.15rem 1.3rem;margin-top:1.3rem}
+.est-out{font-size:1.12rem;color:var(--navy-deep);font-family:var(--fd);font-weight:700}
+.est-out b{color:var(--accent)}
+.est-note{font-size:.84rem;color:var(--ink-soft);font-weight:400;font-family:var(--fb)}
 </style>
 </head>
 <body>
@@ -117,32 +123,50 @@
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label">Local citations</span>
-      <h1 style="margin:1rem 0 .9rem">Local citations order form</h1>
-      <p>Build high-quality local and national business listings to improve your local SEO. Choose your quantity, tell us about your business, and we&rsquo;ll handle the rest.</p>
+      <span class="label">Website build</span>
+      <h1 style="margin:1rem 0 .9rem">Website build / redesign order form</h1>
+      <p>A clean, fast site built to turn visitors into calls. Tell us what you need, share a few details, and we&rsquo;ll handle the rest.</p>
       <div class="cit-steps">
-        <div class="cit-step"><div class="n">01</div><h3>Pick quantity</h3><p>Choose your country and how many citations you want.</p></div>
-        <div class="cit-step"><div class="n">02</div><h3>Add details</h3><p>Tell us about your business so every listing is accurate.</p></div>
-        <div class="cit-step"><div class="n">03</div><h3>We build</h3><p>We submit your listings &mdash; normal delivery 10&ndash;14 days.</p></div>
-        <div class="cit-step"><div class="n">04</div><h3>You rank</h3><p>Consistent citations build local trust and rankings.</p></div>
+        <div class="cit-step"><div class="n">01</div><h3>Pick your build</h3><p>Choose a new build or a redesign, and how big.</p></div>
+        <div class="cit-step"><div class="n">02</div><h3>Add details</h3><p>Tell us about your business so we build it right.</p></div>
+        <div class="cit-step"><div class="n">03</div><h3>We design + build</h3><p>We build, you review &mdash; typical delivery 1&ndash;2 weeks.</p></div>
+        <div class="cit-step"><div class="n">04</div><h3>You convert</h3><p>A fast site that turns visitors into booked calls.</p></div>
       </div>
     </div>
     <div style="max-width:780px">
-<form class="form" name="citations" method="POST" action="/success.html" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="_gotcha">
-      <input type="hidden" name="form-name" value="citations">
-      <input type="hidden" name="subject" value="New citations order - talosoperations.com">
+<form class="form" id="webOrderForm" name="website-order" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
+      <input type="hidden" name="form-name" value="website-order">
+      <input type="hidden" name="subject" value="New website build request - talosoperations.com">
+      <input type="hidden" name="estimate" id="estHidden" value="$500">
 
-      <h3 class="form-section-title">1 &middot; Quantity</h3>
+      <h3 class="form-section-title">1 &middot; Your build</h3>
       <div class="field">
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option>United States</option><option>Canada</option><option>United Kingdom</option><option>Australia</option><option>Other</option>
-        </select>
+        <label>Build type</label>
+        <div class="radio-row">
+          <label class="radio-card"><input type="radio" name="build_type" value="New build" checked> New build</label>
+          <label class="radio-card"><input type="radio" name="build_type" value="Redesign of existing site"> Redesign of existing site</label>
+        </div>
       </div>
-      <div class="qty-box">
-        <div class="qty-head"><span>Citations</span><span class="qty-max">200 max</span></div>
-        <input type="range" min="10" max="200" value="10" step="5" id="citeRange" name="citation_quantity" aria-label="Number of citations">
-        <div class="cite-out"><span id="citeCount">10</span> citations &middot; <b>$<span id="citeTotal">20</span></b> <span class="muted">&mdash; $2 per citation</span></div>
+      <div class="field">
+        <label>Site size</label>
+        <div class="size-cards">
+          <label class="size-card"><input type="radio" name="site_size" value="Starter - $500" data-price="500" checked><span class="sc-name">Starter</span><span class="sc-desc">1-page landing site</span><span class="sc-price">$500</span></label>
+          <label class="size-card"><input type="radio" name="site_size" value="Standard - $1,200" data-price="1200"><span class="sc-name">Standard</span><span class="sc-desc">Up to 5 pages (home, services, about, contact + 1)</span><span class="sc-price">$1,200</span></label>
+          <label class="size-card"><input type="radio" name="site_size" value="Complete - $2,000" data-price="2000"><span class="sc-name">Complete</span><span class="sc-desc">Up to 10 pages, multiple service / location pages</span><span class="sc-price">$2,000</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Optional add-ons</label>
+        <div class="addon-list">
+          <div class="addon-opt"><span>Extra pages <small style="color:var(--ink-dim)">(+$150 / page)</small></span><span><input type="number" name="extra_pages" id="extraPages" min="0" max="20" value="0" step="1" aria-label="Number of extra pages"></span></div>
+          <label class="addon-opt"><span><input type="checkbox" name="addon_copywriting" value="Professional copywriting" data-price="300"> Professional copywriting</span><span class="ac-price">+$300</span></label>
+          <label class="addon-opt"><span><input type="checkbox" name="addon_blog" value="Blog setup" data-price="200"> Blog setup</span><span class="ac-price">+$200</span></label>
+          <label class="addon-opt"><span><input type="checkbox" name="addon_booking" value="Online booking integration" data-price="250"> Online booking integration</span><span class="ac-price">+$250</span></label>
+        </div>
+        <div class="included-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Included with every build: free professional email + Google tracking setup.</div>
+      </div>
+      <div class="est-box">
+        <div class="est-out" id="estOut">Estimated: <b>$500</b> <span class="est-note">&mdash; final price confirmed on your kickoff call</span></div>
       </div>
 
       <h3 class="form-section-title">2 &middot; Your details</h3>
@@ -150,53 +174,26 @@
         <div class="field"><label for="fn">First name *</label><input id="fn" name="fn" type="text" autocomplete="given-name" required></div>
         <div class="field"><label for="ln">Last name *</label><input id="ln" name="ln" type="text" autocomplete="family-name" required></div>
       </div>
-      <div class="field"><label for="em">Email address *</label><input id="em" name="em" type="email" autocomplete="email" required></div>
+      <div class="form-row">
+        <div class="field"><label for="em">Email address *</label><input id="em" name="em" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
 
       <h3 class="form-section-title">3 &middot; Business information</h3>
       <div class="field"><label for="biz">Business name *</label><input id="biz" name="biz" type="text" required></div>
-      <div class="field"><label for="site">Website URL *</label><input id="site" name="site" type="text" inputmode="url" placeholder="www.yourbusiness.com" required></div>
-      <div class="field"><label for="bizdesc">Business description *</label><textarea id="bizdesc" name="bizdesc" placeholder="A sentence or two about what your business does and who you serve." required></textarea></div>
-      <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+      <div class="field"><label for="cursite">Current website <span class="optional">(if a redesign)</span></label><input id="cursite" name="cursite" type="text" inputmode="url" placeholder="www.yourbusiness.com"></div>
       <div class="form-row">
-        <div class="field"><label for="addr1">Address line 1 *</label><input id="addr1" name="addr1" type="text" autocomplete="address-line1" required></div>
-        <div class="field"><label for="addr2">Address line 2</label><input id="addr2" name="addr2" type="text" autocomplete="address-line2"></div>
+        <div class="field"><label for="trade">Industry / trade</label><input id="trade" name="trade" type="text" placeholder="e.g. Roofing, HVAC, Plumbing"></div>
+        <div class="field"><label for="area">Service area</label><input id="area" name="area" type="text" placeholder="City / region you serve"></div>
       </div>
-      <div class="form-row">
-        <div class="field"><label for="city">City *</label><input id="city" name="city" type="text" autocomplete="address-level2" required></div>
-        <div class="field"><label for="state">State *</label><input id="state" name="state" type="text" autocomplete="address-level1" required></div>
-      </div>
-      <div class="form-row">
-        <div class="field"><label for="zip">Zip / postcode *</label><input id="zip" name="zip" type="text" autocomplete="postal-code" required></div>
-        <div class="field"><label for="cat">Category</label><input id="cat" name="cat" type="text" placeholder="e.g. HVAC, Plumber, Roofer"></div>
-      </div>
-      <div class="field"><label for="kw">Target keywords</label><input id="kw" name="kw" type="text" placeholder="Services + towns you want to rank for"></div>
-      <div class="form-row">
-        <div class="field"><label for="year">Year founded</label><input id="year" name="year" type="text" inputmode="numeric"></div>
-        <div class="field"><label for="emp">Number of employees</label><input id="emp" name="emp" type="text" inputmode="numeric"></div>
-      </div>
+      <div class="field"><label for="goal">What do you want the site to do? *</label><textarea id="goal" name="goal" placeholder="e.g. get more calls for roofing jobs" required></textarea></div>
+      <div class="field"><label for="notes">Anything else we should know? <span class="optional">(optional)</span></label><textarea id="notes" name="notes" placeholder="Examples you like, brand colors, must-have pages, deadlines, etc."></textarea></div>
 
-      <h3 class="form-section-title">4 &middot; Opening hours <span class="optional">(optional)</span></h3>
-      <p class="form-note" style="margin-top:0">Set hours in 30-minute steps, or tap a preset. We&rsquo;ve started you at a standard Mon&ndash;Fri 8&nbsp;AM&ndash;5&nbsp;PM.</p><div class="hours-presets"><span class="hours-presets-label">Quick set:</span><button type="button" class="btn-mini" data-hours-preset="weekday">Mon&ndash;Fri, 8&nbsp;AM&ndash;5&nbsp;PM</button><button type="button" class="btn-mini" data-hours-preset="247">Open 24/7</button><button type="button" class="btn-mini" data-hours-preset="clear">Clear</button></div><div class="hours" id="hoursGrid"><div class="hours-row" data-day="monday"><span class="day">Monday</span><select name="monday_open" class="hsel" aria-label="Monday open"></select><span class="to">&ndash;</span><select name="monday_close" class="hsel" aria-label="Monday close"></select><label class="closed"><input type="checkbox" name="monday_closed"> Closed</label></div><div class="hours-row" data-day="tuesday"><span class="day">Tuesday</span><select name="tuesday_open" class="hsel" aria-label="Tuesday open"></select><span class="to">&ndash;</span><select name="tuesday_close" class="hsel" aria-label="Tuesday close"></select><label class="closed"><input type="checkbox" name="tuesday_closed"> Closed</label></div><div class="hours-row" data-day="wednesday"><span class="day">Wednesday</span><select name="wednesday_open" class="hsel" aria-label="Wednesday open"></select><span class="to">&ndash;</span><select name="wednesday_close" class="hsel" aria-label="Wednesday close"></select><label class="closed"><input type="checkbox" name="wednesday_closed"> Closed</label></div><div class="hours-row" data-day="thursday"><span class="day">Thursday</span><select name="thursday_open" class="hsel" aria-label="Thursday open"></select><span class="to">&ndash;</span><select name="thursday_close" class="hsel" aria-label="Thursday close"></select><label class="closed"><input type="checkbox" name="thursday_closed"> Closed</label></div><div class="hours-row" data-day="friday"><span class="day">Friday</span><select name="friday_open" class="hsel" aria-label="Friday open"></select><span class="to">&ndash;</span><select name="friday_close" class="hsel" aria-label="Friday close"></select><label class="closed"><input type="checkbox" name="friday_closed"> Closed</label></div><div class="hours-row" data-day="saturday"><span class="day">Saturday</span><select name="saturday_open" class="hsel" aria-label="Saturday open"></select><span class="to">&ndash;</span><select name="saturday_close" class="hsel" aria-label="Saturday close"></select><label class="closed"><input type="checkbox" name="saturday_closed"> Closed</label></div><div class="hours-row" data-day="sunday"><span class="day">Sunday</span><select name="sunday_open" class="hsel" aria-label="Sunday open"></select><span class="to">&ndash;</span><select name="sunday_close" class="hsel" aria-label="Sunday close"></select><label class="closed"><input type="checkbox" name="sunday_closed"> Closed</label></div></div>
-
-      <h3 class="form-section-title">5 &middot; Logo &amp; photos <span class="optional">(optional)</span></h3>
-      <div class="form-row">
-        <div class="field"><label for="logo">Upload logo</label><input id="logo" name="logo" type="file" accept="image/*"></div>
-        <div class="field"><label for="photos">Upload photos</label><input id="photos" name="photos" type="file" accept="image/*" multiple></div>
-      </div>
-      <div class="field"><label for="docs">Existing citations / documents</label><input id="docs" name="docs" type="file" accept=".csv,.doc,.docx,.pdf,.xlsx"></div>
-      <p class="form-note">Already listed somewhere? Upload a spreadsheet or doc with each listing&rsquo;s business name, address, phone, and link. Don&rsquo;t have a list? No problem &mdash; skip it and we&rsquo;ll find and clean up your existing listings for you.</p>
-
-      <h3 class="form-section-title">Delivery</h3>
-      <div class="delivery-note">&#9673; Normal delivery &mdash; 10&ndash;14 days</div>
-
-      <div class="field" style="margin-top:1.4rem"><label for="discount">Discount code</label><input id="discount" name="discount" type="text" placeholder="Optional"></div>
-
-      <h3 class="form-section-title">Anything else?</h3>
-      <div class="field"><label for="notes">Notes or special requests <span class="optional">(optional)</span></label><textarea id="notes" name="notes" placeholder="Additional locations, specific directories you want, or anything else that helps us get your listings right."></textarea></div>
-
-      <button type="submit" class="btn btn-accent btn-lg" style="width:100%">Submit citation order</button>
+      <h3 class="form-section-title">4 &middot; Terms</h3>
+      <p class="form-note" style="margin-top:0">50% deposit to start, 50% on delivery. You own the website and domain once paid in full.</p>
+      <button type="submit" class="btn btn-accent btn-lg" style="width:100%;margin-top:1.3rem">Request my website build</button>
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      <div class="form-success">Thanks &mdash; your citation order is in. We&rsquo;ll confirm by email and get started.</div>
+      <div class="form-success">Got it &mdash; we&rsquo;ll review and send your final quote and next steps within 1 business day.</div>
     </form>
     </div>
   </div>
@@ -256,7 +253,7 @@
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://talosoperations.com/#website","url":"https://talosoperations.com/","name":"Talos Operations","publisher":{"@id":"https://talosoperations.com/#business"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Local Citations","item":"https://talosoperations.com/citations.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Website Build Order","item":"https://talosoperations.com/website-order.html"}]}
 </script>
 <script src="script.js" defer></script>
 </body>

@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
-<title>What&rsquo;s Included in Lead Engine &mdash; $2,500/mo | Talos Operations</title>
-<meta name="description" content="Everything in Get Found, plus multi-channel paid ads scaled across every channel, weekly optimization, multiple landing pages, and A/B testing.">
-<link rel="canonical" href="https://talosoperations.com/plan-lead-engine.html">
+<title>Ad Strategies &mdash; Where Your Ad Budget Actually Works | Talos Operations</title>
+<meta name="description" content="Every Talos plan includes your own ad budget. See the channels we pull from &mdash; Google Local Services Ads, Search, Facebook &amp; Instagram, and retargeting &mdash; and how we build a custom strategy for your trade.">
+<link rel="canonical" href="https://talosoperations.com/ad-strategies.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="What&rsquo;s Included in Lead Engine &mdash; $2,500/mo | Talos Operations">
-<meta property="og:description" content="Everything in Get Found, plus multi-channel paid ads scaled across every channel, weekly optimization, multiple landing pages, and A/B testing.">
-<meta property="og:url" content="https://talosoperations.com/plan-lead-engine.html">
+<meta property="og:title" content="Ad Strategies &mdash; Where Your Ad Budget Actually Works | Talos Operations">
+<meta property="og:description" content="Every Talos plan includes your own ad budget. See the channels we pull from &mdash; Google Local Services Ads, Search, Facebook &amp; Instagram, and retargeting &mdash; and how we build a custom strategy for your trade.">
+<meta property="og:url" content="https://talosoperations.com/ad-strategies.html">
 <meta property="og:image" content="https://talosoperations.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Talos Operations">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What&rsquo;s Included in Lead Engine &mdash; $2,500/mo | Talos Operations">
-<meta name="twitter:description" content="Everything in Get Found, plus multi-channel paid ads scaled across every channel, weekly optimization, multiple landing pages, and A/B testing.">
+<meta name="twitter:title" content="Ad Strategies &mdash; Where Your Ad Budget Actually Works | Talos Operations">
+<meta name="twitter:description" content="Every Talos plan includes your own ad budget. See the channels we pull from &mdash; Google Local Services Ads, Search, Facebook &amp; Instagram, and retargeting &mdash; and how we build a custom strategy for your trade.">
 <meta name="twitter:image" content="https://talosoperations.com/og-image.jpg">
 <meta name="theme-color" content="#14233f">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -30,17 +30,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=8">
 <style>
-.plan-feat{display:grid;gap:.8rem;max-width:840px}
-.plan-feat .pf{display:flex;gap:.85rem;padding:1.05rem 1.3rem;background:var(--card);border:1px solid var(--border);border-radius:var(--r);transition:border-color .25s,box-shadow .25s}
-.plan-feat .pf:hover{border-color:var(--border-2);box-shadow:var(--shadow-sm)}
-.plan-feat .pf .ic{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-top:1px}
-.plan-feat .pf .ic svg{width:15px;height:15px}
-.plan-feat .pf b{display:block;font-family:var(--fd);color:var(--navy-deep);font-size:1rem}
-.plan-feat .pf p{font-size:.93rem;margin-top:.15rem}
-.tier-note{max-width:840px;margin-bottom:1.8rem;padding:.9rem 1.3rem;background:var(--bg-alt);border:1px solid var(--border-2);border-radius:var(--r);color:var(--ink-soft);font-size:.95rem}
-.tier-note strong{color:var(--ink)}.tier-note a{color:var(--accent);font-weight:600}
-.plan-group{max-width:840px;margin-bottom:2.2rem}
-.plan-group-title{font-family:var(--fd);font-size:1.18rem;color:var(--navy-deep);margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1px solid var(--border-2)}
+.ad-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+@media(max-width:760px){.ad-grid{grid-template-columns:1fr}}
+.ad-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.7rem;transition:border-color .25s,box-shadow .25s,transform .25s}
+.ad-card:hover{border-color:var(--border-2);box-shadow:var(--shadow);transform:translateY(-3px)}
+.ad-card h3{font-family:var(--fd);font-size:1.2rem;color:var(--navy-deep);margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid var(--border)}
+.ad-row{display:grid;grid-template-columns:128px 1fr;gap:1rem;padding:.6rem 0}
+.ad-row+.ad-row{border-top:1px solid var(--border)}
+.ad-k{font-size:.74rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding-top:.15rem}
+.ad-row p{font-size:.93rem;color:var(--ink-soft);margin:0}
+.ad-cost{font-family:var(--fd);font-weight:700;color:var(--navy-deep)!important}
+@media(max-width:520px){.ad-row{grid-template-columns:1fr;gap:.15rem}}
+.decide-list{max-width:780px;display:grid;gap:1.1rem;counter-reset:dc;list-style:none;padding:0}
+.decide-list li{position:relative;padding-left:2.7rem;font-size:1.04rem;color:var(--ink-soft);line-height:1.6}
+.decide-list li:before{counter-increment:dc;content:counter(dc);position:absolute;left:0;top:-.05rem;width:1.8rem;height:1.8rem;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-family:var(--fd);font-weight:700;font-size:.92rem;display:grid;place-items:center}
+.expect-box{max-width:780px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.8rem}
+.expect-box p{font-size:1.06rem;color:var(--ink);margin:0}
+.expect-box .disclaimer{margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--ink-dim);font-style:italic}
 </style>
 </head>
 <body>
@@ -100,25 +106,73 @@
 <section class="section">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="label">Lead Engine &middot; $2,500/mo + ad budget</span>
-      <h1 style="margin:1rem 0 .9rem">What&rsquo;s included in <span class="accent">Lead Engine</span></h1>
-      <p>Aggressive lead generation across every channel. These are the additions on top of everything in Get Found.</p>
+      <span class="label">Ad Strategies</span>
+      <h1 style="margin:1rem 0 .9rem">Your ad budget, spent where it actually works</h1>
+      <p>Every plan includes your own ad budget &mdash; you fund the ads, we decide the smartest place to spend it. No two trades are the same, so we build a custom strategy for your business instead of forcing a template. Here&rsquo;s the toolkit we pull from.</p>
     </div>
-    <div class="tier-note reveal"><strong>Everything in Get Found is included</strong> &mdash; <a href="plan-get-found.html">see the Get Found plan &rarr;</a> &mdash; plus the scaled lead generation below:</div>
-    <div class="plan-group reveal"><h3 class="plan-group-title">Lead generation &mdash; scaled</h3><div class="plan-feat"><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Multi-channel paid advertising</b><p>We add Facebook + Instagram ads on top of Google Search and Local Services Ads, reaching customers everywhere they are.</p></div></div><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Scaled ad management</b><p>We push your campaigns harder across channels to maximize lead volume.</p></div></div><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Weekly optimization</b><p>We tune your campaigns every week to lower your cost per lead and improve lead quality.</p></div></div><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Expanded market + keyword coverage</b><p>We widen targeting to cover more towns and more of the searches your customers use.</p></div></div></div></div>
-    <div class="plan-group reveal"><h3 class="plan-group-title">Website + conversion</h3><div class="plan-feat"><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Multiple landing pages</b><p>Dedicated pages for different services or towns so every ad sends people to the most relevant page.</p></div></div><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>A/B testing</b><p>We test headlines and layouts to keep improving how many visitors become calls.</p></div></div></div></div>
-    <div class="plan-group reveal"><h3 class="plan-group-title">Reporting + communication (upgraded)</h3><div class="plan-feat"><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Priority reporting dashboard</b><p>A live dashboard where you can see leads and performance any time.</p></div></div><div class="pf"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Frequent check-ins</b><p>More regular strategy calls to keep growing your results.</p></div></div></div></div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="label">The toolkit</span><h2>Channels we pull from</h2></div>
+    <div class="ad-grid">
+      <div class="ad-card reveal" style="--i:0">
+        <h3>Google Local Services Ads (LSA)</h3>
+        <div class="ad-row"><span class="ad-k">What it is</span><p>Pay-per-lead ads at the very top of Google with the &ldquo;Google Guaranteed&rdquo; badge. You only pay when a real customer calls.</p></div>
+        <div class="ad-row"><span class="ad-k">Best for</span><p>Fast phone calls from ready-to-hire local customers. Requires license + insurance.</p></div>
+        <div class="ad-row"><span class="ad-k">Cost / lead</span><p class="ad-cost">~$25&ndash;$150 <span style="font-weight:500;color:var(--ink-soft);font-size:.85rem">&middot; by trade &amp; market</span></p></div>
+      </div>
+      <div class="ad-card reveal" style="--i:1">
+        <h3>Google Search Ads</h3>
+        <div class="ad-row"><span class="ad-k">What it is</span><p>Ads that show when someone searches high-intent terms like &ldquo;[your service] near me.&rdquo; You capture demand at the exact moment they&rsquo;re looking.</p></div>
+        <div class="ad-row"><span class="ad-k">Best for</span><p>High-intent buyers ready to act now.</p></div>
+        <div class="ad-row"><span class="ad-k">Cost / lead</span><p class="ad-cost">~$50&ndash;$250 <span style="font-weight:500;color:var(--ink-soft);font-size:.85rem">&middot; by trade &amp; competition</span></p></div>
+      </div>
+      <div class="ad-card reveal" style="--i:2">
+        <h3>Facebook &amp; Instagram Ads</h3>
+        <div class="ad-row"><span class="ad-k">What it is</span><p>Targeted local ads with photos/video that put your work in front of people in your area &mdash; including those not actively searching yet.</p></div>
+        <div class="ad-row"><span class="ad-k">Best for</span><p>Volume, seasonal pushes, and showcasing before/after work. Lower cost per lead, lower intent.</p></div>
+        <div class="ad-row"><span class="ad-k">Cost / lead</span><p class="ad-cost">Usually the lowest of the three <span style="font-weight:500;color:var(--ink-soft);font-size:.85rem">&middot; leads need more nurturing</span></p></div>
+      </div>
+      <div class="ad-card reveal" style="--i:3">
+        <h3>Retargeting &amp; supporting channels</h3>
+        <div class="ad-row"><span class="ad-k">What it is</span><p>Follow-up ads that re-reach people who already visited your site or profile, plus supporting placements.</p></div>
+        <div class="ad-row"><span class="ad-k">Best for</span><p>Staying top-of-mind and squeezing more out of the traffic you&rsquo;re already paying for.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="label">Our approach</span><h2>How we decide your strategy</h2></div>
+    <ul class="decide-list reveal">
+      <li>We look at your trade, your market, your budget, and your goals.</li>
+      <li>We start with the single highest-ROI channel so you see leads fast, then expand into others as the numbers prove out.</li>
+      <li>We manage the budget and shift spend toward whatever&rsquo;s producing the best leads at the lowest cost.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="label">What to expect</span><h2>The math, roughly</h2></div>
+    <div class="expect-box reveal">
+      <p>A single job in most trades is worth hundreds to thousands of dollars. At typical lead costs and normal close rates, it usually only takes a small handful of jobs a month to make the ad spend pay for itself many times over.</p>
+      <p class="disclaimer">Figures shown are general industry benchmarks, not guarantees. Actual cost per lead and results vary by trade, location, budget, competition, and how quickly you respond to leads.</p>
+    </div>
   </div>
 </section>
 
 <section class="section--tight">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Ready to scale your leads?</h2>
-      <p>Book a free consultation and we&rsquo;ll map out exactly how we&rsquo;d grow your business.</p>
+      <h2>Ready to put your budget to work?</h2>
+      <p>We&rsquo;ll map the right ad strategy for your business &mdash; free, no pressure.</p>
       <div class="row">
-        <a href="get-started.html?plan=lead-engine" class="btn btn-white btn-lg">Book a free consultation <span class="arr">&rarr;</span></a>
-        <a href="services.html" class="btn btn-ghost btn-lg" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.3)">Back to all plans</a>
+        <a href="get-started.html" class="btn btn-white btn-lg">Book a free consultation <span class="arr">&rarr;</span></a>
+        <a href="services.html" class="btn btn-ghost btn-lg" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.3)">See the plans</a>
       </div>
     </div>
   </div>
@@ -178,7 +232,7 @@
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://talosoperations.com/#website","url":"https://talosoperations.com/","name":"Talos Operations","publisher":{"@id":"https://talosoperations.com/#business"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Lead Engine","item":"https://talosoperations.com/plan-lead-engine.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Ad Strategies","item":"https://talosoperations.com/ad-strategies.html"}]}
 </script>
 <script src="script.js" defer></script>
 </body>

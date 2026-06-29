@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 <style>
 .legal{max-width:760px}
 .legal .lead{font-size:1.12rem;color:var(--ink-soft);margin-bottom:1.5rem;line-height:1.6}
@@ -67,7 +67,13 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li class="has-dropdown">
+        <a href="services.html">Services <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="services.html"><b>Plans &amp; pricing</b><span>Packages &amp; add-ons</span></a>
+          <a href="ad-strategies.html"><b>Ad Strategies</b><span>Where your ad budget goes</span></a>
+        </div>
+      </li>
       <li><a href="blog.html">Insights</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -169,6 +175,7 @@
         <div class="col-title">Pages</div>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="ad-strategies.html">Ad Strategies</a>
         <a href="about.html">About</a>
         <a href="blog.html">Insights</a>
         <a href="contact.html">Contact</a>

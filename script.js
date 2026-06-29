@@ -159,7 +159,7 @@
         var pr = btn.getAttribute("data-hours-preset");
         hdays.forEach(function (d) {
           if (pr === "weekday") setDay(d, "8:00 AM", "5:00 PM", d === "saturday" || d === "sunday");
-          else if (pr === "247") setDay(d, "12:00 AM", "11:59 PM", false);
+          else if (pr === "247") setDay(d, "12:00 AM", "12:00 AM", false);
           else setDay(d, "", "", false);
         });
       });
@@ -208,5 +208,36 @@
     if (e.key !== "Escape") return;
     document.querySelectorAll(".modal:not([hidden])").forEach(function (m) { m.hidden = true; document.body.style.overflow = ""; });
   });
+
+  /* Website order live estimate */
+  var webForm = document.getElementById("webOrderForm");
+  if (webForm) {
+    var estOut = document.getElementById("estOut");
+    var estHidden = document.getElementById("estHidden");
+    var calcEst = function () {
+      var base = 0;
+      var size = webForm.querySelector('input[name="site_size"]:checked');
+      if (size) base = parseInt(size.getAttribute("data-price"), 10) || 0;
+      var add = 0;
+      webForm.querySelectorAll('input[type=checkbox][data-price]').forEach(function (cb) {
+        if (cb.checked) add += parseInt(cb.getAttribute("data-price"), 10) || 0;
+      });
+      var ep = document.getElementById("extraPages");
+      var extra = ep ? (parseInt(ep.value, 10) || 0) : 0;
+      if (extra < 0) extra = 0;
+      add += extra * 150;
+      var total = base + add;
+      if (total > 2500) {
+        estOut.innerHTML = '$2,500+ &middot; <b>Let&rsquo;s talk</b> <span class="est-note">&mdash; custom quote</span>';
+        if (estHidden) estHidden.value = "$2,500+ (custom quote)";
+      } else {
+        estOut.innerHTML = 'Estimated: <b>$' + total.toLocaleString() + '</b> <span class="est-note">&mdash; final price confirmed on your kickoff call</span>';
+        if (estHidden) estHidden.value = "$" + total;
+      }
+    };
+    webForm.addEventListener("change", calcEst);
+    webForm.addEventListener("input", calcEst);
+    calcEst();
+  }
 
 })();

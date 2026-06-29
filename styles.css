@@ -338,7 +338,7 @@ p{color:var(--ink-soft)}
 .pcard .pmore-toggle:hover{text-decoration:underline}
 .pcard .pmore-list{max-height:0;overflow:hidden;margin-bottom:0;transition:max-height .32s var(--ease),margin .32s var(--ease)}
 .pcard .pmore-list.open{margin-top:.9rem;margin-bottom:.7rem}
-.pcard .pmore{display:block;text-align:center;font-size:.85rem;font-weight:600;color:var(--accent);margin:1.4rem 0 1.1rem;text-decoration:none}
+.pcard .pmore{display:block;text-align:center;font-size:.85rem;font-weight:600;color:var(--accent);margin:1.4rem 0 .35rem;text-decoration:none}
 .pcard .pmore:hover{text-decoration:underline}
 /* ---------- plan detail: grouped sections ---------- */
 .plan-group{max-width:840px;margin-bottom:2.2rem}
@@ -381,3 +381,7 @@ p{color:var(--ink-soft)}
 .modal-x{position:absolute;top:.8rem;right:1rem;width:34px;height:34px;border:none;background:var(--bg-alt);border-radius:50%;cursor:pointer;font-size:1.35rem;line-height:1;color:var(--ink-soft)}
 .modal-x:hover{background:var(--border);color:var(--ink)}
 @media(max-width:680px){.addon-grid{grid-template-columns:1fr}}
+
+/* "See our ad strategies" secondary link under each plan card */
+.pcard .pmore-ad{display:block;text-align:center;margin:0 0 1.1rem;font-size:.8rem;font-weight:500;color:var(--ink-soft);text-decoration:none}
+.pcard .pmore-ad:hover{color:var(--accent);text-decoration:underline}
