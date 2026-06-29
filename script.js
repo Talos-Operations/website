@@ -193,26 +193,20 @@
     citeCard.addEventListener("input", updateCard);
     updateCard();
   }
-  /* A la carte "See details" toggles */
-  document.querySelectorAll(".detail-toggle").forEach(function (btn) {
-    var list = btn.nextElementSibling;
-    if (!list || !list.classList.contains("detail-list")) return;
-    btn.addEventListener("click", function () {
-      var open = list.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
-      list.style.maxHeight = open ? list.scrollHeight + "px" : null;
-      btn.textContent = open ? (btn.getAttribute("data-close") || "Hide details") : (btn.getAttribute("data-open") || "See details");
+  /* "Learn more" modals (generic) */
+  document.querySelectorAll("[data-modal]").forEach(function (btn) {
+    var modal = document.getElementById(btn.getAttribute("data-modal"));
+    if (!modal) return;
+    btn.addEventListener("click", function () { modal.hidden = false; document.body.style.overflow = "hidden"; });
+  });
+  document.querySelectorAll(".modal").forEach(function (modal) {
+    modal.querySelectorAll("[data-close-modal]").forEach(function (el) {
+      el.addEventListener("click", function () { modal.hidden = true; document.body.style.overflow = ""; });
     });
   });
-  /* Citations "Learn more" modal */
-  var citeModal = document.getElementById("citeModal");
-  var citeOpenBtn = document.getElementById("citeLearnMore");
-  if (citeModal && citeOpenBtn) {
-    var openModal = function () { citeModal.hidden = false; document.body.style.overflow = "hidden"; };
-    var closeModal = function () { citeModal.hidden = true; document.body.style.overflow = ""; };
-    citeOpenBtn.addEventListener("click", openModal);
-    citeModal.querySelectorAll("[data-close-modal]").forEach(function (el) { el.addEventListener("click", closeModal); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !citeModal.hidden) closeModal(); });
-  }
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    document.querySelectorAll(".modal:not([hidden])").forEach(function (m) { m.hidden = true; document.body.style.overflow = ""; });
+  });
 
 })();
