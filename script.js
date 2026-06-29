@@ -96,7 +96,7 @@
   /* Get Started — preselect plan from ?plan= */
   var planParam = new URLSearchParams(location.search).get("plan");
   if (planParam) {
-    var planMap = { basic: "Basic", growth: "Get Found", complete: "Complete" };
+    var planMap = { "get-found": "Get Found", "lead-engine": "Lead Engine", "market-leader": "Market Leader" };
     var want = planMap[planParam.toLowerCase()];
     if (want) {
       document.querySelectorAll('input[name="plan"]').forEach(function (r) {
@@ -164,4 +164,16 @@
     });
     hdays.forEach(function (d) { setDay(d, "8:00 AM", "5:00 PM", d === "saturday" || d === "sunday"); });
   }
+  /* Pricing "+ More" toggles */
+  document.querySelectorAll(".pmore-toggle").forEach(function (btn) {
+    var list = btn.nextElementSibling;
+    if (!list || !list.classList.contains("pmore-list")) return;
+    btn.addEventListener("click", function () {
+      var open = list.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      list.style.maxHeight = open ? list.scrollHeight + "px" : null;
+      btn.textContent = open ? "Close" : "+ More";
+    });
+  });
+
 })();
