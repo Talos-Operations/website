@@ -4,152 +4,165 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.classList.add('js')</script>
-<title>Get Started — Choose Your Plan | Talos Operations</title>
-<meta name="description" content="Pick a plan, share a few details, and book your kickoff call. Get started with websites, Google Business Profile, and automation from Talos.">
+<title>Book a Free Consultation | Talos Operations</title>
+<meta name="description" content="Book a free consultation with Talos Operations. Pick a plan, grab a time, and we'll map out the fastest path to more local customers.">
 <link rel="canonical" href="https://talosoperations.com/get-started.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Get Started — Choose Your Plan | Talos Operations">
-<meta property="og:description" content="Pick a plan, share a few details, and book your kickoff call. Get started with websites, Google Business Profile, and automation from Talos.">
+<meta property="og:title" content="Book a Free Consultation | Talos Operations">
+<meta property="og:description" content="Book a free consultation with Talos Operations. Pick a plan, grab a time, and we'll map out the fastest path to more local customers.">
 <meta property="og:url" content="https://talosoperations.com/get-started.html">
 <meta property="og:image" content="https://talosoperations.com/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Talos Operations">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Get Started — Choose Your Plan | Talos Operations">
-<meta name="twitter:description" content="Pick a plan, share a few details, and book your kickoff call. Get started with websites, Google Business Profile, and automation from Talos.">
+<meta name="twitter:title" content="Book a Free Consultation | Talos Operations">
+<meta name="twitter:description" content="Book a free consultation with Talos Operations. Pick a plan, grab a time, and we'll map out the fastest path to more local customers.">
 <meta name="twitter:image" content="https://talosoperations.com/og-image.jpg">
-<meta name="theme-color" content="#1b3d68">
+<meta name="theme-color" content="#14233f">
 <link rel="icon" type="image/png" href="/img/logo-mark.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+<style>
+.planpick{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0 2.4rem}
+@media(max-width:680px){.planpick{grid-template-columns:1fr}}
+.planpick label{display:block;position:relative;cursor:pointer;background:var(--card);border:1px solid var(--border-2);border-radius:var(--r);padding:1.1rem 1.2rem;transition:border-color .2s,box-shadow .2s}
+.planpick label:hover,.planpick label:has(input:checked){border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.planpick input{position:absolute;opacity:0;width:0;height:0}
+.planpick .pn{display:block;font-family:var(--fd);font-weight:700;color:var(--navy-deep)}
+.planpick .pp{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:.15rem}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
+<!-- ============ TOP UTILITY BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="ti">
+      <a href="tel:+19106125616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9V19a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 3.2 2 2 0 0 1 4 1h2.1a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L9.1 10a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> (910) 612-5616</a>
+      <a class="mail" href="mailto:hello@talosoperations.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> hello@talosoperations.com</a>
+      <span class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Serving local businesses across the US</span>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
 <header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Talos Operations home">
-        <img class="mark" src="/img/logo-mark.png" alt="" width="32" height="32">
-        <span>Talos<small>Operations</small></span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="has-dropdown">
-          <a href="future-projects.html">Future Projects</a>
-          <div class="dropdown">
-            <a href="deed-reader.html"><b>Deed Reader</b><span>Intake for law firms</span></a>
-            <a href="terrakotta-costar.html"><b>Terrakotta &times; CoStar</b><span>For commercial real estate</span></a>
-          </div>
-        </li>
-        <li><a href="contact.html" class="btn btn-accent nav-cta-mobile">Get a free audit</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="contact.html" class="btn btn-primary nav-cta">Get a free audit</a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
-      </div>
-    </nav>
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Talos Operations home">
+      <img class="mark" src="/img/logo-mark.png" alt="" width="30" height="30">
+      <span>Talos<small>Operations</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li class="has-dropdown">
+        <a href="future-projects.html">Software <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="deed-reader.html"><b>Deed Reader</b><span>AI intake for law firms</span></a>
+          <a href="terrakotta-costar.html"><b>Terrakotta &times; CoStar</b><span>For commercial real estate</span></a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-accent nav-cta-mobile">Get a free audit</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-accent nav-cta">Get a free audit</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
   </div>
 </header>
 
 <main id="main">
-
-<section class="page-hero">
-  <div class="container">
-    <span class="label reveal">Get started</span>
-    <h1 class="reveal">Let&rsquo;s get you <span class="accent">growing</span></h1>
-    <p class="reveal">Pick your plan, then grab a free consultation in a couple of clicks. We&rsquo;ll map out exactly how to get you found and booked &mdash; no payment now.</p>
-  </div>
-</section>
-
-<section class="section--tight">
-  <div class="container" style="max-width:780px">
-    <div class="form">
-
-      <h3 class="form-section-title">1 &middot; Choose your plan</h3>
-      <div class="plan-picker">
-        <label class="plan-opt"><input type="radio" name="plan" value="Basic ($249/mo)">
-          <span class="po-card"><span class="po-name">Basic</span><span class="po-price">$249<small>/mo</small></span><span class="po-desc">Get found on Google</span></span></label>
-        <label class="plan-opt"><input type="radio" name="plan" value="Get Found + Capture ($449/mo)" checked>
-          <span class="po-card"><span class="po-tag">Popular</span><span class="po-name">Get Found + Capture</span><span class="po-price">$449<small>/mo</small></span><span class="po-desc">Capture every lead</span></span></label>
-        <label class="plan-opt"><input type="radio" name="plan" value="Complete ($699/mo)">
-          <span class="po-card"><span class="po-name">Complete</span><span class="po-price">$699<small>/mo</small></span><span class="po-desc">The full growth engine</span></span></label>
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Get started</span>
+      <h1 style="margin:1rem 0 .9rem">Book your free consultation</h1>
+      <p>Pick the plan you&rsquo;re leaning toward (optional), then grab a time that works. We&rsquo;ll walk through your goals and map out the fastest path to more customers &mdash; no pressure.</p>
+    </div>
+    <div class="reveal" style="max-width:880px">
+      <h3 style="margin-bottom:.2rem">1 &middot; Which plan fits? <span style="font-weight:500;color:var(--ink-dim);font-size:.85rem">(optional)</span></h3>
+      <div class="planpick">
+        <label><input type="radio" name="plan" value="Basic — $249/mo"><span class="pn">Basic</span><span class="pp">$249/mo &middot; Free setup</span></label>
+        <label><input type="radio" name="plan" value="Get Found + Capture — $449/mo"><span class="pn">Get Found + Capture</span><span class="pp">$449/mo &middot; $300 setup</span></label>
+        <label><input type="radio" name="plan" value="Complete — $699/mo"><span class="pn">Complete</span><span class="pp">$699/mo &middot; $500 setup</span></label>
       </div>
-
-      <h3 class="form-section-title">2 &middot; Book your free consultation</h3>
-      <p class="form-note" style="margin:-.2rem 0 1.2rem">Pick a time that works and we&rsquo;ll map out exactly how to get you found, booked, and growing &mdash; no payment, no pressure. Not sure which plan fits? We&rsquo;ll help you choose on the call.</p>
-      <div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff;box-shadow:var(--shadow-sm)">
+      <h3 style="margin-bottom:.2rem">2 &middot; Pick a time</h3>
+      <p class="muted" style="margin-bottom:1.2rem">Not sure which plan? No problem &mdash; we&rsquo;ll help you choose on the call.</p>
+      <div style="border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm)">
         <iframe src="https://api.leadconnectorhq.com/widget/booking/tNdXR6yPU9rg7Y04taU3" style="width:100%;border:none;overflow:hidden;min-height:720px;display:block" scrolling="no" id="tNdXR6yPU9rg7Y04taU3_1782611504503" title="Book a free consultation with Talos Operations"></iframe>
       </div>
     </div>
   </div>
 </section>
-
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-top">
       <div>
-        <a href="index.html" class="brand" aria-label="Talos Operations home">
-          <img class="mark" src="/img/logo-mark.png" alt="" width="32" height="32">
-          <span>Talos<small>Operations</small></span>
-        </a>
-        <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
+        <a href="index.html" class="brand" aria-label="Talos Operations home"><img class="mark" src="/img/logo-mark.png" alt="" width="30" height="30"><span>Talos<small>Operations</small></span></a>
+        <p class="fdesc">Making local businesses impossible to miss — with the websites, Google presence, and automation that get them found and booked.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col-title">Pages</div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Software</div>
+        <a href="future-projects.html">Overview</a>
+        <a href="deed-reader.html">Deed Reader</a>
+        <a href="terrakotta-costar.html">Terrakotta &times; CoStar</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Stay in the loop</div>
+        <p style="font-size:.9rem;color:#9aa8c4;margin-bottom:.9rem">Local growth tips, no spam.</p>
         <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
           <input type="hidden" name="form-name" value="newsletter">
           <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
           <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
-          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      </form>
-      </div>
-      <div class="col">
-        <div class="col-title">Pages</div>
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="future-projects.html">Future Projects</a>
-        <a href="deed-reader.html">Deed Reader</a>
-        <a href="terrakotta-costar.html">Terrakotta &times; CoStar</a>
-      </div>
-      <div class="col">
-        <div class="col-title">Connect</div>
-        <a href="tel:+19106125616">(910) 612-5616</a>
-        <a href="mailto:hello@talosoperations.com">hello@talosoperations.com</a>
-        <div class="socials"><a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a><a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a></div>
+          <div class="form-success">Thanks — you're subscribed.</div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        </form>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Talos Operations LLC. All rights reserved. &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></span>
+      <span>© 2026 Talos Operations LLC. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></span>
       <span>Built by Talos Operations</span>
     </div>
   </div>
 </footer>
 
 <script type="application/ld+json">
-{
-"@context":"https://schema.org","@type":"Organization","@id":"https://talosoperations.com/#business","name":"Talos Operations","url":"https://talosoperations.com/","email":"hello@talosoperations.com","logo":"https://talosoperations.com/img/logo-mark.png","description":"Websites, Google Business Profile optimization, and automation that get local trade businesses found and booked.","areaServed":"US","sameAs":["https://www.facebook.com/talosoperations","https://www.instagram.com/talosoperations"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+1-910-612-5616","email":"hello@talosoperations.com","areaServed":"US","availableLanguage":"English"}
-}
+{"@context":"https://schema.org","@type":"Organization","@id":"https://talosoperations.com/#business","name":"Talos Operations","url":"https://talosoperations.com/","email":"hello@talosoperations.com","logo":"https://talosoperations.com/img/logo-mark.png","description":"Websites, Google Business Profile optimization, and automation that get local businesses found and booked.","areaServed":"US","sameAs":["https://www.facebook.com/talosoperations","https://www.instagram.com/talosoperations"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+1-910-612-5616","email":"hello@talosoperations.com","areaServed":"US","availableLanguage":"English"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://talosoperations.com/#website","url":"https://talosoperations.com/","name":"Talos Operations","publisher":{"@id":"https://talosoperations.com/#business"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://talosoperations.com/services.html"},{"@type":"ListItem","position":3,"name":"Get Started","item":"https://talosoperations.com/get-started.html"}]}
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://talosoperations.com/"},{"@type":"ListItem","position":2,"name":"Get Started","item":"https://talosoperations.com/get-started.html"}]}
 </script>
 <script src="script.js" defer></script>
 <script src="https://api.leadconnectorhq.com/js/form_embed.js"></script>

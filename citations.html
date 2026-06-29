@@ -20,72 +20,108 @@
 <meta name="twitter:title" content="Local Citations Service — Order Form | Talos Operations">
 <meta name="twitter:description" content="Order high-quality local and national business citations to boost your local SEO. Choose your quantity, share your business details, and we build your listings.">
 <meta name="twitter:image" content="https://talosoperations.com/og-image.jpg">
-<meta name="theme-color" content="#1b3d68">
+<meta name="theme-color" content="#14233f">
 <link rel="icon" type="image/png" href="/img/logo-mark.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+<style>
+.cit-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+@media(max-width:760px){.cit-steps{grid-template-columns:1fr 1fr}}
+.cit-step{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.3rem}
+.cit-step .n{font-family:var(--fd);font-weight:800;color:var(--accent);font-size:1.05rem;margin-bottom:.35rem}
+.cit-step h3{font-size:1rem;margin-bottom:.25rem}
+.cit-step p{font-size:.87rem}
+.form-section-title{font-family:var(--fd);font-size:1.06rem;color:var(--navy-deep);margin:1.8rem 0 .8rem;padding-top:1.4rem;border-top:1px solid var(--border)}
+.form-section-title:first-of-type{border-top:none;padding-top:0;margin-top:.4rem}
+.optional{font-weight:400;color:var(--ink-dim);font-size:.85rem}
+.qty-box{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1.3rem}
+.qty-head{display:flex;justify-content:space-between;font-size:.85rem;color:var(--ink-soft);margin-bottom:.7rem}
+.qty-max{color:var(--ink-dim)}
+.qty-box input[type=range]{width:100%;accent-color:var(--accent)}
+.cite-out{margin-top:.7rem;font-size:1rem;color:var(--ink)}
+.cite-out b{font-family:var(--fd);color:var(--navy-deep)}
+.hours-presets{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:1rem}
+.hours-presets-label{font-size:.85rem;color:var(--ink-soft)}
+.btn-mini{font-size:.82rem;font-weight:600;padding:.4rem .8rem;border-radius:var(--r-pill);border:1px solid var(--border-2);background:var(--card);color:var(--navy);cursor:pointer}
+.btn-mini:hover{border-color:var(--accent);color:var(--accent)}
+.hours{display:grid;gap:.5rem;margin-top:.4rem}
+.hours-row{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.hours-row .day{width:96px;font-size:.9rem;font-weight:600;color:var(--ink)}
+.hsel{padding:.45rem .6rem;border:1px solid var(--border-2);border-radius:var(--r-sm);background:var(--bg);font-size:.86rem;font-family:var(--fb)}
+.hours-row .to{color:var(--ink-dim)}
+.hours-row .closed{display:inline-flex;align-items:center;gap:.35rem;font-size:.85rem;color:var(--ink-soft);margin-left:auto}
+.hours-row.is-closed .hsel{opacity:.4}
+.delivery-note{background:var(--accent-soft);color:var(--navy-deep);border-radius:var(--r-sm);padding:.8rem 1.1rem;font-weight:600;font-size:.92rem}
+.form-note{font-size:.85rem;color:var(--ink-soft);margin-top:.5rem}
+</style>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
+<!-- ============ TOP UTILITY BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="ti">
+      <a href="tel:+19106125616"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9V19a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 3.2 2 2 0 0 1 4 1h2.1a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L9.1 10a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> (910) 612-5616</a>
+      <a class="mail" href="mailto:hello@talosoperations.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg> hello@talosoperations.com</a>
+      <span class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Serving local businesses across the US</span>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
 <header class="header">
-  <div class="container">
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="brand" aria-label="Talos Operations home">
-        <img class="mark" src="/img/logo-mark.png" alt="" width="32" height="32">
-        <span>Talos<small>Operations</small></span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="has-dropdown">
-          <a href="future-projects.html">Future Projects</a>
-          <div class="dropdown">
-            <a href="deed-reader.html"><b>Deed Reader</b><span>Intake for law firms</span></a>
-            <a href="terrakotta-costar.html"><b>Terrakotta &times; CoStar</b><span>For commercial real estate</span></a>
-          </div>
-        </li>
-        <li><a href="contact.html" class="btn btn-accent nav-cta-mobile">Get a free audit</a></li>
-      </ul>
-      <div class="nav-right">
-        <a href="contact.html" class="btn btn-primary nav-cta">Get a free audit</a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
-      </div>
-    </nav>
+  <div class="wrap nav">
+    <a href="index.html" class="brand" aria-label="Talos Operations home">
+      <img class="mark" src="/img/logo-mark.png" alt="" width="30" height="30">
+      <span>Talos<small>Operations</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li class="has-dropdown">
+        <a href="future-projects.html">Software <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></a>
+        <div class="dropdown">
+          <a href="deed-reader.html"><b>Deed Reader</b><span>AI intake for law firms</span></a>
+          <a href="terrakotta-costar.html"><b>Terrakotta &times; CoStar</b><span>For commercial real estate</span></a>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="btn btn-accent nav-cta-mobile">Get a free audit</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-accent nav-cta">Get a free audit</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
   </div>
 </header>
 
 <main id="main">
-
-<section class="page-hero">
-  <div class="container">
-    <span class="label reveal">Local Citations</span>
-    <h1 class="reveal">Local citations <span class="accent">order form</span></h1>
-    <p class="reveal">Build high-quality local and national business listings to improve your local SEO. Choose your quantity, tell us about your business, and we&rsquo;ll handle the rest.</p>
-  </div>
-</section>
-
-<section class="section--tight">
-  <div class="container">
-    <div class="team-grid reveal">
-      <article class="card"><div class="num">01</div><h3>Pick quantity</h3><p>Choose your country and how many citations you want.</p></article>
-      <article class="card"><div class="num">02</div><h3>Add details</h3><p>Tell us about your business so every listing is accurate.</p></article>
-      <article class="card"><div class="num">03</div><h3>We build</h3><p>We submit your listings &mdash; normal delivery 10&ndash;14 days.</p></article>
-      <article class="card"><div class="num">04</div><h3>You rank</h3><p>Consistent citations build local trust and rankings.</p></article>
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="label">Local citations</span>
+      <h1 style="margin:1rem 0 .9rem">Local citations order form</h1>
+      <p>Build high-quality local and national business listings to improve your local SEO. Choose your quantity, tell us about your business, and we&rsquo;ll handle the rest.</p>
+      <div class="cit-steps">
+        <div class="cit-step"><div class="n">01</div><h3>Pick quantity</h3><p>Choose your country and how many citations you want.</p></div>
+        <div class="cit-step"><div class="n">02</div><h3>Add details</h3><p>Tell us about your business so every listing is accurate.</p></div>
+        <div class="cit-step"><div class="n">03</div><h3>We build</h3><p>We submit your listings &mdash; normal delivery 10&ndash;14 days.</p></div>
+        <div class="cit-step"><div class="n">04</div><h3>You rank</h3><p>Consistent citations build local trust and rankings.</p></div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="section--tight">
-  <div class="container" style="max-width:780px">
-    <form class="form" name="citations" method="POST" action="/success.html" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="_gotcha">
+    <div style="max-width:780px">
+<form class="form" name="citations" method="POST" action="/success.html" enctype="multipart/form-data" data-netlify="true" data-netlify-honeypot="_gotcha">
       <input type="hidden" name="form-name" value="citations">
       <input type="hidden" name="subject" value="New citations order - talosoperations.com">
 
@@ -155,58 +191,58 @@
       <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       <div class="form-success">Thanks &mdash; your citation order is in. We&rsquo;ll confirm by email and get started.</div>
     </form>
+    </div>
   </div>
 </section>
-
 </main>
 
 <footer class="footer">
-  <div class="container">
+  <div class="wrap">
     <div class="footer-top">
       <div>
-        <a href="index.html" class="brand" aria-label="Talos Operations home">
-          <img class="mark" src="/img/logo-mark.png" alt="" width="32" height="32">
-          <span>Talos<small>Operations</small></span>
-        </a>
-        <h4 style="margin-top:1.2rem">Making local businesses impossible to miss.</h4>
+        <a href="index.html" class="brand" aria-label="Talos Operations home"><img class="mark" src="/img/logo-mark.png" alt="" width="30" height="30"><span>Talos<small>Operations</small></span></a>
+        <p class="fdesc">Making local businesses impossible to miss — with the websites, Google presence, and automation that get them found and booked.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col-title">Pages</div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Software</div>
+        <a href="future-projects.html">Overview</a>
+        <a href="deed-reader.html">Deed Reader</a>
+        <a href="terrakotta-costar.html">Terrakotta &times; CoStar</a>
+      </div>
+      <div class="col">
+        <div class="col-title">Stay in the loop</div>
+        <p style="font-size:.9rem;color:#9aa8c4;margin-bottom:.9rem">Local growth tips, no spam.</p>
         <form class="news" name="newsletter" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="_gotcha">
           <input type="hidden" name="form-name" value="newsletter">
           <input type="hidden" name="subject" value="New newsletter signup - talosoperations.com">
           <input type="email" name="email" placeholder="Your email" aria-label="Newsletter email" required>
           <button class="btn btn-accent" type="submit">Subscribe</button>
-          <div class="form-success">Thanks &mdash; you&rsquo;re subscribed.</div>
-                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      </form>
-      </div>
-      <div class="col">
-        <div class="col-title">Pages</div>
-        <a href="index.html">Home</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="future-projects.html">Future Projects</a>
-        <a href="deed-reader.html">Deed Reader</a>
-        <a href="terrakotta-costar.html">Terrakotta &times; CoStar</a>
-      </div>
-      <div class="col">
-        <div class="col-title">Connect</div>
-        <a href="tel:+19106125616">(910) 612-5616</a>
-        <a href="mailto:hello@talosoperations.com">hello@talosoperations.com</a>
-        <div class="socials"><a href="https://www.facebook.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a><a href="https://www.instagram.com/talosoperations" target="_blank" rel="noopener" aria-label="Talos Operations on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 7.62a4.38 4.38 0 1 0 0 8.76 4.38 4.38 0 0 0 0-8.76zm0 7.23a2.85 2.85 0 1 1 0-5.7 2.85 2.85 0 0 1 0 5.7zm5.58-7.4a1.02 1.02 0 1 1-2.05 0 1.02 1.02 0 0 1 2.05 0z"/></svg></a></div>
+          <div class="form-success">Thanks — you're subscribed.</div>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        </form>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Talos Operations LLC. All rights reserved. &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></span>
+      <span>© 2026 Talos Operations LLC. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms</a></span>
       <span>Built by Talos Operations</span>
     </div>
   </div>
 </footer>
 
 <script type="application/ld+json">
-{
-"@context":"https://schema.org","@type":"Organization","@id":"https://talosoperations.com/#business","name":"Talos Operations","url":"https://talosoperations.com/","email":"hello@talosoperations.com","logo":"https://talosoperations.com/img/logo-mark.png","description":"Websites, Google Business Profile optimization, and automation that get local trade businesses found and booked.","areaServed":"US","sameAs":["https://www.facebook.com/talosoperations","https://www.instagram.com/talosoperations"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+1-910-612-5616","email":"hello@talosoperations.com","areaServed":"US","availableLanguage":"English"}
-}
+{"@context":"https://schema.org","@type":"Organization","@id":"https://talosoperations.com/#business","name":"Talos Operations","url":"https://talosoperations.com/","email":"hello@talosoperations.com","logo":"https://talosoperations.com/img/logo-mark.png","description":"Websites, Google Business Profile optimization, and automation that get local businesses found and booked.","areaServed":"US","sameAs":["https://www.facebook.com/talosoperations","https://www.instagram.com/talosoperations"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+1-910-612-5616","email":"hello@talosoperations.com","areaServed":"US","availableLanguage":"English"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://talosoperations.com/#website","url":"https://talosoperations.com/","name":"Talos Operations","publisher":{"@id":"https://talosoperations.com/#business"}}

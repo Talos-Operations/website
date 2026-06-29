@@ -6,7 +6,7 @@
   var header = document.querySelector(".header");
   function onScroll() {
     if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 20);
+    header.classList.toggle("scrolled", window.scrollY > 12);
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -24,6 +24,7 @@
       a.addEventListener("click", function () {
         links.classList.remove("open");
         toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
       });
     });
   }
@@ -42,7 +43,8 @@
 
   /* Scroll reveal */
   var reveals = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && reveals.length) {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if ("IntersectionObserver" in window && reveals.length && !reduce) {
     var io = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (e) {
@@ -52,25 +54,21 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -50px 0px" }
     );
-    reveals.forEach(function (el) {
-      io.observe(el);
-    });
+    reveals.forEach(function (el) { io.observe(el); });
   } else {
-    reveals.forEach(function (el) {
-      el.classList.add("in");
-    });
+    reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
   /* Real form submit -> Netlify Forms. AJAX for standard forms (inline
      success, no page jump); file-upload forms submit natively. */
   document.querySelectorAll("form[data-netlify]").forEach(function (form) {
-    if (form.enctype === "multipart/form-data") return; // files -> native submit
+    if (form.enctype === "multipart/form-data") return;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var hp = form.querySelector('[name="_gotcha"]');
-      if (hp && hp.value) return; // bot caught by honeypot
+      if (hp && hp.value) return;
       var btn = form.querySelector('[type="submit"]');
       if (btn) btn.disabled = true;
       var body = new URLSearchParams(new FormData(form)).toString();
@@ -90,12 +88,23 @@
         })
         .catch(function () {
           if (btn) btn.disabled = false;
-          form.submit(); // fallback: native submit so the lead still lands
+          form.submit();
         });
     });
   });
 
-  /* Citations add-on slider (services page) */
+  /* Get Started — preselect plan from ?plan= */
+  var planParam = new URLSearchParams(location.search).get("plan");
+  if (planParam) {
+    var planMap = { basic: "Basic", growth: "Get Found", complete: "Complete" };
+    var want = planMap[planParam.toLowerCase()];
+    if (want) {
+      document.querySelectorAll('input[name="plan"]').forEach(function (r) {
+        if (r.value.indexOf(want) === 0) r.checked = true;
+      });
+    }
+  }
+  /* Citations add-on slider (citations.html) */
   var citeRange = document.getElementById("citeRange");
   if (citeRange) {
     var citeCount = document.getElementById("citeCount");
@@ -109,7 +118,7 @@
     updateCite();
   }
 
-  /* Citations — opening-hours grid: 30-min dropdowns, presets, Closed toggle */
+  /* Citations opening-hours grid: 30-min dropdowns, presets, Closed toggle */
   var hoursGrid = document.getElementById("hoursGrid");
   if (hoursGrid) {
     var opts = ['<option value="">&mdash;</option>'];
@@ -154,17 +163,5 @@
       });
     });
     hdays.forEach(function (d) { setDay(d, "8:00 AM", "5:00 PM", d === "saturday" || d === "sunday"); });
-  }
-
-  /* Get Started — preselect plan from ?plan= */
-  var planParam = new URLSearchParams(location.search).get("plan");
-  if (planParam) {
-    var planMap = { basic: "Basic", growth: "Get Found", complete: "Complete" };
-    var want = planMap[planParam.toLowerCase()];
-    if (want) {
-      document.querySelectorAll('input[name="plan"]').forEach(function (r) {
-        if (r.value.indexOf(want) === 0) r.checked = true;
-      });
-    }
   }
 })();
